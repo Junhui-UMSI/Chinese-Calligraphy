@@ -1,15 +1,16 @@
+html {
+  background: url ("./imgs/bg-home.jpg")
+}
 .home_links a {
     position: absolute;
     display: block;
-    text-indent: -9999em;
+    /*text-indent: -9999em;*/
 }
 
-.nav_in{
 
-}
 
 @media (max-width: 570px){
-.link_availability {
+.nav_mas {
     left: 240px;
     top: 30px;
     width: 98px;
@@ -18,7 +19,7 @@
 }
 
 @media (max-width: 768px){
-.link_availability {
+.nav_mas {
     left: 272px;
     top: 42px;
     width: 122px;
@@ -27,7 +28,7 @@
 }
 
 @media (max-width: 992px){
-.link_availability {
+.nav_mas {
     left: 386px;
     top: 42px;
     width: 150px;
