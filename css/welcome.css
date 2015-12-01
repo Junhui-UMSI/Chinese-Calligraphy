@@ -1,0 +1,117 @@
+html{
+  min-width: 320px;
+  margin-bottom: 0;
+  height: 100%;
+}
+
+body {
+  background: url("../imgs/basic.png");
+  background-repeat: repeat;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+header {
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 5%;
+    width:80%;
+}
+
+h1{
+  font-size: 24px;
+  display: block;
+  color:white;
+  margin: 0 auto;
+  vertical-align: middle;
+  padding: 30px 0;
+  background: url("../imgs/header.png") center center  no-repeat;
+  background-size: 100% 70%;
+  background-position: -15px;
+}
+
+
+.container {
+  position: relative;
+  height:0px;
+  background: url("../imgs/nav.png") center top no-repeat;
+  /*background-size: 80%;*/
+  background-size: contain;
+  width: 100%;
+  padding-top: 75%;
+
+}
+
+.container a{
+  display:block;
+  position: absolute;
+  text-align: center;
+  text-indent: -9999em;
+}
+
+.container ul{
+  list-style: none;
+}
+
+footer{
+  bottom: 0;
+}
+.box {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  background: url("../imgs/footer.png")center bottom no-repeat;
+  background-size: 100% 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+footer p{
+  position:absolute;
+  left:20%;
+  top:20%;
+  width:60%;
+  display: block;
+}
+
+
+.nav_mas {
+    left: 48%;
+    top: 3%;
+    width: 30%;
+    height: 10%;
+}
+
+.nav_his {
+    left: 62%;
+    top: 21%;
+    width: 16%;
+    height: 10%;
+}
+
+.nav_to {
+    left: 43%;
+    top: 40%;
+    width: 13%;
+    height: 10%;
+}
+
+.nav_my {
+    left: 20%;
+    top: 21%;
+    width: 33%;
+    height: 10%;
+}
+@media (min-width: 768px){
+header{
+  width:100%;
+}
+h1{
+  background-size: 100% 80%;
+  font-size: 44px;
+}
+}
+
+
+@media (min-width: 992px){
