@@ -41,6 +41,7 @@ h1{
   background-position: -15px;
 }
 
+
 @keyframes animatedBackground {
 	from { background-position: 0 0; }
 	to { background-position: 100% 0; }
@@ -58,13 +59,12 @@ h1{
 
 
 .container {
+  position: relative;
   height:0;
-  background: url("../imgs/nav.png") center top no-repeat;
-  /*background-size: 80%;*/
+  background: url("../imgs/navigation.png") center top no-repeat;
   background-size: contain;
   width: 100%;
   padding-top: 75%;
-
 }
 
 .container a{
@@ -72,9 +72,10 @@ h1{
   position: absolute;
   text-align: center;
   text-indent: -9999em;
+  cursor:url("../imgs/cursor.png"), auto;
 }
 
-.container ul{
+ul{
   list-style: none;
 }
 
@@ -87,6 +88,12 @@ h1{
   background-size: 100% 90%;
   text-align: center;
   margin: 0 auto;
+}
+
+.login {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
 }
 footer p{
   position:absolute;
@@ -113,7 +120,7 @@ footer p{
 
 .nav_to {
     left: 43%;
-    top: 40%;
+    top: 50%;
     width: 13%;
     height: 10%;
 }

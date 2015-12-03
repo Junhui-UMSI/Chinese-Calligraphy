@@ -1,0 +1,22 @@
+nav{
+    width:80%;
+    margin: 0 auto;
+}
+nav li{
+    display: inline-block;
+    height: 100px;
+    width: 120px;
+    display:table-cell;
+    text-align: center;
+    vertical-align: middle;
+    background: url("../imgs/navbase.png") center top no-repeat;
+  }
+nav li a{
+    text-decoration: none;
+    background:url("../imgs/abase.png") center top no-repeat;
+    background-size: auto 50px;
+    display: inline-block;
+    height: 50px;
+    width: 120px;
+    margin:auto;
+  }
