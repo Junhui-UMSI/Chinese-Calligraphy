@@ -34,8 +34,6 @@ h1{
   font-size: 24px;
   display: block;
   color:white;
-  margin: 0 auto;
-  vertical-align: middle;
   padding: 30px 0;
   background: url("../imgs/header.png") center center  no-repeat;
   background-size: 100% 70%;
@@ -100,9 +98,10 @@ footer p{
   font-family: Georgia, serif;
   position:absolute;
   left:20%;
-  top:40%;
+  top:20%;
   width:60%;
   display: block;
+  font-size: 12px;
 }
 
 
@@ -141,7 +140,13 @@ h1{
   background-size: 100% 80%;
   font-size: 44px;
 }
+
+footer p{
+font-size: 16px;
+top:35%;
+}
 }
 
 
 @media (min-width: 992px){
+}
