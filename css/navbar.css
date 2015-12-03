@@ -1,22 +1,27 @@
-nav{
-    width:80%;
-    margin: 0 auto;
+nav ul{
+    padding-left: 0;
+    display: table;
+    width:100%;
+    height: 100px;
 }
 nav li{
-    display: inline-block;
+    display: table-cell;
     height: 100px;
-    width: 120px;
+    width: 20%;
     display:table-cell;
     text-align: center;
     vertical-align: middle;
-    background: url("../imgs/navbase.png") center top no-repeat;
+    background: url("../imgs/navbase.png") center center no-repeat;
   }
 nav li a{
-    text-decoration: none;
-    background:url("../imgs/abase.png") center top no-repeat;
-    background-size: auto 50px;
+    font-weight: bold;
     display: inline-block;
-    height: 50px;
-    width: 120px;
-    margin:auto;
+    cursor:url("../imgs/cursor.png"), auto;
+    color: black;
+    font-family: Georgia, serif;
+    text-decoration: none;
+    background:url("../imgs/abase.png") center no-repeat;
+    background-size: auto 50px;
+    line-height:50px;
+    width: 100%;
   }

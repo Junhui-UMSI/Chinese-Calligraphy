@@ -1,59 +1,127 @@
-<!-- This is Abbey's branch -->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>TeamProject</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="UTF-8">
+  <title>Masterpieces</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./imgs/favicon.ico">
   <link rel="stylesheet" type="text/css" href="css/abbey.css">
+  <link rel="stylesheet" type="text/css" href="css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="css/gallery.css" />
+  <!-- <noscript>
+            <style>
+                .cn-images img{position: relative;display: block;border-bottom: 5px solid #d0ab47;}
+                .cn-slideshow{height: auto;}
+            </style>
+        </noscript> -->
+  <script id="barTmpl" type="text/x-jquery-tmpl">
+    <div class="cn-bar">
+      <div class="cn-nav">
+        <a href="#" class="cn-nav-prev">
+          <span>Previous</span>
+          <div style="background-image:url(${prevSource});"></div>
+        </a>
+        <a href="#" class="cn-nav-next">
+          <span>Next</span>
+          <div style="background-image:url(${nextSource});"></div>
+        </a>
+      </div>
+      <!-- cn-nav -->
+      <div class="cn-nav-content">
+        <div class="cn-nav-content-prev">
+          <span>Previous</span>
+          <h3>${prevTitle}</h3>
+        </div>
+        <div class="cn-nav-content-current">
+          <span>Currently viewing</span>
+          <h2>${currentTitle}</h2>
+        </div>
+        <div class="cn-nav-content-next">
+          <span>Next</span>
+          <h3>${nextTitle}</h3>
+        </div>
+      </div>
+      <!-- cn-nav-content -->
+    </div>
+    <!-- cn-bar -->
+  </script>
+
 </head>
 
 <body>
-
   <header>
-    <nav class="smallnav">
+    <h1 class="nav_in" href="index.html">Chinese Calligraphy</h1>
+    <nav>
       <ul>
-        <li><a href="welcome.html">Index</a></li>
-        <li><a href="masterpieces.html">Masterpieces</a></li>
-        <li><a href="history.html">History</a></li>
-        <li><a href="tools.html">Tools</a></li>
-        <li><a href="mycollection.html">My Collections</a></li>
+        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="welcome.html">Index</a></li>
+        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="masterpiece.html">Masterpiece</a></li>
+        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="history.html">History</a></li>
+        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="tools.html">Tools</a></li>
+        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="mycollection.html">My Page</a></li>
       </ul>
+
     </nav>
   </header>
-  <div class="contentbackground">
+  <script>
+    function spread(li) {
+      li.style.background = "url('./imgs/navbase.gif') no-repeat";
+      li.style.backgroundSize = "auto 100px";
+    }
 
-    <div class="imgbox">
-      <p>img</p>
+    function back(li) {
+      li.style.background = "url('./imgs/navbase.png') center top no-repeat"
+    }
+  </script>
+  </header>
+
+  <div class="gallery">
+    <div class="wrapper">
+      <div id="cn-slideshow" class="cn-slideshow">
+        <div class="cn-images">
+          <img src="images/large/h_zhuan_1.jpg" alt="Fragment of the Stone Drum Inscription" title="Fragment of the Stone Drum Inscription" data-thumb="images/thumbs/hzhuan1.jpg" />
+          <img src="images/large/h_zhuan_2.jpg" alt="Yishan Stele" title="Yishan Stele" data-thumb="images/thumbs/hzhuan2.jpg" />
+          <img src="images/large/h_li_1.jpg" alt="Qingchuan Wooden Slips" title="Qingchuan Wooden Slips" data-thumb="images/thumbs/hli1.jpg" />
+          <img src="images/large/h_li_2.jpg" alt="Caoquan Stele" title="Caoquan Stele" data-thumb="images/thumbs/hli2.jpg" />
+          <img src="images/large/h_cao_1.jpg" alt="Jijiu Book" title="Jijiu Book" data-thumb="images/thumbs/hcao1.jpg" />
+          <img src="images/large/h_cao_2.jpg" alt="Guanjun Tie" title="Guanjun Tie" data-thumb="images/thumbs/hcao2.jpg" />
+          <img src="images/large/h_cao_3.jpg" alt="Autobiography (Zixun Tie)" title="Autobiography (Zixun Tie)" data-thumb="images/thumbs/hcao3.jpg" />
+          <img src="images/large/m_kai_1.jpg" alt="Duobao Pagoda Stele" title="Duobao Pagoda Stele" data-thumb="images/thumbs/mkai1.jpg" />
+          <img src="images/large/m_kai_2.jpg" alt="Xuanmi Pagoda Stele" title="Xuanmi Pagoda Stele" data-thumb="images/thumbs/mkai2.jpg" />
+          <img src="images/large/h_xing_2.jpg" alt="Orchid Pavilion Gathering (Lantingji Xu)" title="Orchid Pavilion Gathering (Lantingji Xu)" data-thumb="images/thumbs/hxing2.jpg" />
+          <img src="images/large/m_xing_2.jpg" alt="Requiem to My Nephew (Jizhi Wengao)" title="Requiem to My Nephew (Jizhi Wengao)" data-thumb="images/thumbs/mxing2.jpg" />
+          <img src="images/large/m_xing_3.jpg" alt="The Cold Food Observance (Hanshi Tie)" title="The Cold Food Observance (Hanshi Tie)" data-thumb="images/thumbs/mxing3.jpg" />
+        </div>
+        <!-- cn-images -->
+      </div>
+      <!-- cn-slideshow -->
     </div>
-
-    <div class="descriptionbox">
-      <p>This is the description</p>
-    </div>
-
-    <div class="imgbox">
-      <p>img</p>
-    </div>
-
-    <div class="descriptionbox">
-      <p>This is the decription</p>
-    </div>
-
   </div>
-
-
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+  <script type="text/javascript" src="js/jquery.slideshow.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $('#cn-slideshow').slideshow();
+    });
+  </script>
   <footer>
-    <div class="smallfootersocialmedia">
-      Social Media infromation
+    <div class="box">
+      <!-- <div class="social">
+              <a href="">
+                <img src="../image/linkedin.png" alt="linkedin.png">
+              </a>
+              <a href="">
+                <img src="../image/facebook.png" alt="facebook.png">
+              </a>
+              <a href="">
+                <img src="../image/instagram.png" alt="instagram.png">
+              </a>
+            </div> -->
+      <p>Junhui Li, Yining Zhou, Ninglu Wang
+        <span style="font-size:1.3em">&copy;</span> 2015 All Rights Reserved</P>
     </div>
-    <div class="smallfootercontact">
-      Contact informaiton
-    </div>
-
   </footer>
-
 </body>
 
 </html>

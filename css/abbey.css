@@ -30,6 +30,7 @@ header {
 }
 
 h1{
+  font-family: Georgia, serif;
   font-size: 24px;
   display: block;
   color:white;
@@ -96,6 +97,7 @@ ul{
   text-align: center;
 }
 footer p{
+  font-family: Georgia, serif;
   position:absolute;
   left:20%;
   top:40%;

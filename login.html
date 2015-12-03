@@ -15,30 +15,24 @@
       <h1 class="nav_in" href="index.html">Chinese Calligraphy</h1>
   <nav>
     <ul>
-      <li id="ind" onmouseover="spread()" onmouseout="back()"><a href="welcome.html">Index</a></li>
-      <li><a id="mas" href="masterpiece.html">Masterpiece</a></li>
-      <li><a id="his" href="history.html">History</a></li>
-      <li><a id="toool" href="tools.html">Tools</a></li>
-      <li><a id="mycoll" href="mycollection.html">My collection</a></li>
+      <li onmouseover="spread(this)" onmouseout="back(this)"><a href="welcome.html">Index</a></li>
+      <li onmouseover="spread(this)" onmouseout="back(this)"><a  href="masterpiece.html">Masterpiece</a></li>
+      <li onmouseover="spread(this)" onmouseout="back(this)"><a  href="history.html">History</a></li>
+      <li onmouseover="spread(this)" onmouseout="back(this)"><a  href="tools.html">Tools</a></li>
+      <li onmouseover="spread(this)" onmouseout="back(this)"><a  href="mycollection.html">My collection</a></li>
     </ul>
 
   </nav>
 </header>
 <script>
-function spread() {
-  var navArray = document.getElementsByTagName("li");
-  for (var i = 0; i < navArray.length; i++) {
-  document.getElementsByTagName("li")[i].style.background="url('./imgs/navbase.gif') no-repeat";
-  document.getElementsByTagName("li")[i].style.backgroundSize="auto 100px";
+function spread(li){
+  li.style.background="url('./imgs/navbase.gif') no-repeat";
+  li.style.backgroundSize="auto 100px";
 }
+function back(li){
+  li.style.background ="url('./imgs/navbase.png') center top no-repeat"
 }
 
-function back(){
-  var navArray = document.getElementsByTagName("li");
-  for (var i = 0; i < navArray.length; i++) {
-  document.getElementsByTagName("li")[i].style.background ="url('./imgs/navbase.png') center top no-repeat"
-}
-}
 </script>
 
 <div class="login">
