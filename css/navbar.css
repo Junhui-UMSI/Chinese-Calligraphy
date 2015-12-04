@@ -43,6 +43,9 @@
   }
 
 @media (min-width: 768px){
+  .bigbar {
+    display:block;
+  }
   .toggle{
     display:none;
   }

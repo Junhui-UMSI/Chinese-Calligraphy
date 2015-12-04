@@ -68,7 +68,7 @@
       <div class="menu">
       <ul>
         <li><a href="welcome.html">Index</a></li>
-        <li><a href="masterpiece.html">Masterpiece</a></li>
+        <li><a href="masterpieces.html">Masterpiece</a></li>
         <li><a href="history.html">History</a></li>
         <li><a href="tools.html">Tools</a></li>
         <li><a href="mycollection.html">My Page</a></li>
@@ -112,6 +112,18 @@
     </div>
   </div>
 
+  <div id="dialogoverlay"></div>
+  <div id="dialogbox">
+    <div>
+      <div id="dialogboxhead"></div>
+      <div id="dialogboxbody"></div>
+      <div id="dialogboxfoot"></div>
+    </div>
+  </div>
+
+<div class="save">
+  <button type="button" onclick="Alert.render('Saved to your page!')">Collect this masterpiece</button>
+</div>
   <footer>
     <div class="box">
       <!-- <div class="social">
@@ -132,6 +144,7 @@
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
   <script type="text/javascript" src="js/jquery.slideshow.js"></script>
+  <script type="text/javascript" src="js/dialogue.js"></script>
   <script type="text/javascript">
     $(function() {
       $('#cn-slideshow').slideshow();

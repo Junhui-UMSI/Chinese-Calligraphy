@@ -1,3 +1,37 @@
+.save{
+  height:40px;
+  width:20%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+button {
+  margin-top: 20px;
+}
+
+#dialogoverlay{
+	display: none;
+	opacity: .8;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: #FFF;
+	width: 100%;
+	z-index: 10;
+}
+#dialogbox{
+	display: none;
+	position: fixed;
+	background: #000;
+	border-radius:7px;
+	width:40%;
+	z-index: 1000;
+}
+#dialogbox > div{ background:#FFF; margin:8px; }
+#dialogbox > div > #dialogboxhead{ background: #666; font-size:19px; padding:10px; color:#CCC; }
+#dialogbox > div > #dialogboxbody{ background:#333; padding:20px; color:#FFF; }
+#dialogbox > div > #dialogboxfoot{ background: #666; padding:10px; text-align:right; }
+
 .cn-slideshow {
   width: 95%;
   height:auto;
@@ -151,6 +185,7 @@ transition: all 0.2s ease-out;
 
 
 @media (min-width: 768px){
+
   .cn-slideshow {
     width: 90%;
     height:500px;
