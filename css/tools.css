@@ -54,7 +54,13 @@ nav ul {
   text-transform: uppercase;
 }
 
+p {
+  font-family:Georgia,serif;
+}
 
+h3 {
+  font-family:Georgia,serif;
+}
 
 /*--------TOOLS BIG VIEW START--------*/
 
@@ -73,6 +79,8 @@ nav ul {
 
   .tool_desk img {
     width:100%;
+    border: #fff solid 10px;
+    box-shadow: 0px 4px 3px 4px #E4e4e4;
   }
 
   .h_img{
@@ -83,12 +91,23 @@ nav ul {
   .h_info {
     position: absolute;
     width:50%;
-    top:3%;
-    left:3%;
+    top:5%;
+    left:25%;
     display: inline-block;
     background-image: url('../imgs/background.jpg');
-    border: #fff solid 3px;
+    /*border: #fff solid 3px;*/
+    box-shadow: 3px 3px 3px 4px #E4e4e4;
     opacity: 0;
+  }
+
+  .h_info p{
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .h_info h3{
+    text-align: center;
   }
 
   .h_img:hover + .h_info{
@@ -123,6 +142,9 @@ nav ul {
     top:70%;
   }
 
+  .line {
+    display:none;
+  }
 
 }
 
@@ -141,12 +163,15 @@ nav ul {
 
   .toolimgbox img {
     display: block;
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
   }
 
   .tooldescriptionbox p{
     display: block;
     text-align: left;
+    width:80%;
+    margin-left: 10%;
   }
 
   .contentbackground {
@@ -180,13 +205,24 @@ nav ul {
     min-height: 50px;
     /*border: 1px solid black;*/
     margin: 0px;
+    margin-top:40px;
   }
 
   .tooldescriptionbox{
     width: 100%;
     min-height: 10px;
-    /*border: 1px solid black;*/
+    border-bottom: 1px dashed black;
     margin: 0px;
     margin-bottom: 10px;
+  }
+
+  .line {
+    display: block;
+  }
+
+  .line img{
+    display: inline-block;
+    width:80%;
+    margin-left: 10%;
   }
 ｝
