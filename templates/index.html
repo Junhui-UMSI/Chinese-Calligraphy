@@ -5,12 +5,12 @@
   <title>Welcome</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="./css/abbey.css">
+  <link rel="stylesheet" type="text/css" href="../static/abbey.css">
 </head>
-<link rel="icon" type="image/png" href="./imgs/favicon.ico">
+<link rel="icon" type="image/png" href="../static/favicon.ico">
 
 <body>
-<img id = "load" src = "./imgs/loading.gif"></div><br>
+<img id = "load" src = "../static/loading.gif"></div><br>
 
   <script type = "text/javascript">
 setTimeout(function(){
@@ -20,16 +20,22 @@ setTimeout(function(){
 
   <header>
       <h1 class="nav_in" href="index.html">Chinese Calligraphy</h1>
+      <div id="account_bar">
+        <ul id="login_signup">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">SignUp</a></li>
+        </ul>
+      </div>
       <div class="animate"></div>
 </header>
 
 <nav>
   <div class="container">
       <ul>
-        <li><a class="nav_mas" href="masterpiece.html">Masterpiece</a></li>
+        <li><a class="nav_mas" href="masterpieces.html">Masterpiece</a></li>
         <li><a class="nav_his" href="history.html">History</a></li>
         <li><a class="nav_to" href="tools.html">Tools</a></li>
-        <li><a class="nav_my" href="mycollection.html">My collection</a></li>
+        <li><a class="nav_my" href="mypage.html">My collection</a></li>
       </ul>
     </div>
 </nav>

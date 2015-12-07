@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../static/abbey.css">
+</head>
+<link rel="icon" type="image/png" href="../static/favicon.ico">
+
+<body>
+  <header>
+    <h1>Chinese Calligraphy</h1>
+    <div id="account_bar">
+          <ul id="login_signup">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">SignUp</a></li>
+          </ul>
+</div>
+    <nav class="bigbar">
+      <ul>
+        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="index.html">Index</a></li>
+        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="masterpieces.html">Masterpiece</a></li>
+        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="history.html">History</a></li>
+        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="tools.html">Tools</a></li>
+        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="mypage.html">My Page</a></li>
+      </ul>
+
+    </nav>
+
+    <nav class="toggle">
+      <img class= "toggleicon" src="../static/toggle.png" alt="toggle icon">
+      <div class="menu">
+      <ul>
+        <li><a href="index.html">Index</a></li>
+        <li><a href="masterpieces.html">Masterpiece</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="mypage.html">My Page</a></li>
+      </ul>
+    </div>
+    </nav>
+
+  </header>
+  <script>
+    function spread(li) {
+      li.style.background = "url('../static/navbase.gif') no-repeat";
+      li.style.backgroundSize = "auto 100px";
+    }
+
+    function back(li) {
+      li.style.background = "url('../static/navbase.png') center top no-repeat"
+    }
+  </script>
+</body>
+</html>
