@@ -22,6 +22,7 @@ header {
     width:80%;
 }
 
+
 #load {
   width:      100%;
   height:     100%;
@@ -53,9 +54,10 @@ ul{
   margin: 0 auto;
   padding-left: 0;
   margin-bottom: 30px;
-  width: 100%;
+  width: 30%;
   text-align: center;
 }
+
 #login_signup li{
   display:inline-block;
   vertical-align: middle;
@@ -74,6 +76,7 @@ ul{
   background-size: auto 80px;
   cursor:url("cursorwhite.png"), auto;
 }
+
 
 
 @keyframes animatedBackground {
