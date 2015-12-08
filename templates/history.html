@@ -44,8 +44,8 @@
       <p class="timeline-date">Feb 2017</p>
       <div class="timeline-content">
         <h3>Canada</h3>
-        {% if session.username %} 
-        <p>The session is here!</p>
+        {% if session.username %}
+        <p>Hello {{session['username']}}</p>
         {% else %}
         <p>The session is not here!</p>
         {% endif %}

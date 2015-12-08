@@ -115,7 +115,8 @@ def login():
 @app.route('/logout')
 @login_required         # means after user login?
 def logout():
-    session.pop('username',None)    # remove the username from the session
+    session.pop('username',None)   # remove the username from the session
+    print (session)
     flash('You were successfully logged out')
     return redirect(url_for('login'))
 
