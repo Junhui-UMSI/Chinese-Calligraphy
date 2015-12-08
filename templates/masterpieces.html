@@ -25,8 +25,13 @@
         <a class="greet">Welcome, Guest</a>
         {% endif %}
       <ul id="login_signup">
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">SignUp</a></li>
+        {% if session.username %}
+        <li><a href="logout">logout</a></li>
+        <li><a href="support">Support</a></li>
+        {% else %}
+        <li><a href="login">Login</a></li>
+        <li><a href="signup">SignUp</a></li>
+        {% endif %}
       </ul>
     </div>
 
