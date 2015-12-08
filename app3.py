@@ -104,7 +104,6 @@ def login():
         else:
             session['logged_in']=True; #what does this do? After i comment it, it still works anyway, yet all the tutorials are saying it.
             session['username']=username # Is it the right way to give the session a temporary id?
-            # session['username']=True
             print (session) #seems doesn't work, how can i know whether i'm in the session?
             flash('Logged in successfully')
             return render_template('login.html', data=data, form=form)

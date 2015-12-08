@@ -20,9 +20,9 @@
         <li onmouseover="spread(this)" onmouseout="back(this)"><a href="history.html">History</a></li>
         <li onmouseover="spread(this)" onmouseout="back(this)"><a href="tools.html">Tools</a></li>
         {% if session.username %}
-        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="mycollection.html">Log out</a></li>
+        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="mycollection.html">{{session['username']}} 's Log out</a></li>
         {% else %}
-        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="mycollection.html">My collection</a></li>
+        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="mycollection.html"> My collection</a></li>
         {% endif %}
       </ul>
 
@@ -53,6 +53,9 @@
          {{messages}}
        </div>
      {% endfor %}
+     {% if session.username %}
+     {{session['username']}}
+     {% endif %}
      {{data}}
     </form>
   </div>
