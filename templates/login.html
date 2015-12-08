@@ -19,7 +19,11 @@
         <li onmouseover="spread(this)" onmouseout="back(this)"><a href="masterpiece.html">Masterpiece</a></li>
         <li onmouseover="spread(this)" onmouseout="back(this)"><a href="history.html">History</a></li>
         <li onmouseover="spread(this)" onmouseout="back(this)"><a href="tools.html">Tools</a></li>
+        {% if session.username %}
+        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="mycollection.html">Log out</a></li>
+        {% else %}
         <li onmouseover="spread(this)" onmouseout="back(this)"><a href="mycollection.html">My collection</a></li>
+        {% endif %}
       </ul>
 
     </nav>
@@ -44,7 +48,12 @@
      {{ form.password.label }} {{ form.password(placeholder="Password") }}
 
      {{ form.submit }}
-
+     {% for messages in get_flashed_messages() %}
+       <div>
+         {{messages}}
+       </div>
+     {% endfor %}
+     {{data}}
     </form>
   </div>
 </body>

@@ -44,7 +44,11 @@
       <p class="timeline-date">Feb 2017</p>
       <div class="timeline-content">
         <h3>Canada</h3>
-        <p>I moved back to Shenzhen, which is my hometown</p>
+        {% if session.username %} 
+        <p>The session is here!</p>
+        {% else %}
+        <p>The session is not here!</p>
+        {% endif %}
       </div>
     </div>
   </div>

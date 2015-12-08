@@ -1,9 +1,10 @@
-from flask import Flask, render_template, request,url_for ,flash #NEW IMPORT -- request
+from flask import Flask, render_template, request,url_for ,flash,session,redirect #NEW IMPORT -- request
 from flask.ext.wtf import Form
 from wtforms import TextField, TextAreaField, SubmitField
 from forms import ContactForm 					# NEW IMPORT LINE
 from flaskext.mysql import MySQL
 from flask.ext.login import login_user, login_required, logout_user, LoginManager
+from functools import wraps
 
 mysql = MySQL()
 app = Flask(__name__)
@@ -16,7 +17,7 @@ mysql.init_app(app)
 
 login_manager = LoginManager()  #don't understand
 login_manager.init_app(app)     #don't understand
-login_manager.login_view = "user.login"
+# login_manager.login_view = "user.login"
 
 
 
@@ -28,12 +29,23 @@ def default():
 @app.route('/index')          								#This is the main URL
 def index():
     return render_template("index.html", name = "index", title = "HOME PAGE")			#The argument should be in templates folder
+def login_required(test):
+    @wraps(test)
+    def wrap(*args,**kwargs):
+        if 'username' in session:   #i changed it into usename, it can still work ,why?
+            return test(*args,**kwargs)
+        else:
+            flash('You need to login first')
+            return redirect(url_for('login'))
+    return wrap
+
 
 @app.route('/mypage')          								#This is the main URL
 def community():
     return render_template("mypage.html", name = "mypage", title = "MYPAGE PAGE")			#The argument should be in templates folder
 
-@app.route('/history')          								#This is the main URL
+@app.route('/history')
+# @login_required          								#This is the main URL
 def history():
     return render_template("history.html", name = "history", title = "HISTORY PAGE")			#The argument should be in templates folder
 
@@ -45,13 +57,13 @@ def tools():
 def masterpieces():
     return render_template("masterpieces.html", name = "masterpieces", title = "MASTERPIECES PAGE")
 
-@app.errorhandler(404)
-def pageNotFound(e):
-    return render_template('404.html'), 404
-
-@app.errorhandler(500)
-def pageNotFound(e):
-    return render_template('500.html'), 500
+# @app.errorhandler(404)
+# def pageNotFound(e):
+#     return render_template('404.html'), 404
+#
+# @app.errorhandler(500)
+# def pageNotFound(e):
+#     return render_template('500.html'), 500
 
 @login_manager.user_loader    #don't understand
 def load_user(user_id):
@@ -87,9 +99,13 @@ def login():
         cursor.execute("SELECT * from User where Username='" + username + "' and Password='" + password + "'")
         data = cursor.fetchone()   # define after this ?
         if data is None:
-            return "Username or Password is wrong"
+            flash( "Username or Password is wrong")
+            return redirect(url_for('login'))
         else:
-            login_user(user) #user is not defined, where the hell to define it?
+            session['logged_in']=True; #what does this do? After i comment it, it still works anyway, yet all the tutorials are saying it.
+            session['username']=username # Is it the right way to give the session a temporary id?
+            # session['username']=True
+            print (session) #seems doesn't work, how can i know whether i'm in the session?
             flash('Logged in successfully')
             return render_template('login.html', data=data, form=form)
 
@@ -99,9 +115,9 @@ def login():
 @app.route('/logout')
 @login_required         # means after user login?
 def logout():
-    session.pop('logged_in',None)
-    flash('You were logged out.')
-    return render_template('index.html')
+    session.pop('username',None)    # remove the username from the session
+    flash('You were successfully logged out')
+    return redirect(url_for('login'))
 
 
 if __name__ == '__main__':
