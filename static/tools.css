@@ -1,0 +1,228 @@
+/*-----TOOLS START------*/
+
+body {
+  left: 0;
+  margin: 0;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  margin: 0px;
+}
+
+footer {
+  background: url('./12.jpg') repeat left top;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 10px;
+  text-decoration: none;
+  border: 1px solid black;
+}
+
+nav ul {
+  border-top: 1px solid #636366;
+  list-style: none;
+  display: -webkit-inline-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.smallnav li {
+  display: block;
+  border-bottom: 1px solid #636366;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  width: 25%;
+  text-align: center;
+}
+
+.smallnav li a:hover {
+  color: red;
+}
+
+.smallnav a {
+  color: black;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+p {
+  font-family:Georgia,serif;
+}
+
+h3 {
+  font-family:Georgia,serif;
+}
+
+/*--------TOOLS BIG VIEW START--------*/
+
+@media (min-width: 769px) {
+
+  .mobile_tool{
+    display: none;
+  }
+
+  .tool_desk {
+    width: 95%;
+    display: inline-block;
+    margin:2.5%;
+    position: relative;
+  }
+
+  .tool_desk img {
+    width:100%;
+    border: #fff solid 10px;
+    box-shadow: 0px 4px 3px 4px #E4e4e4;
+  }
+
+  .h_img{
+    position: absolute;
+    display: inline-block;
+  }
+
+  .h_info {
+    position: absolute;
+    width:50%;
+    top:5%;
+    left:25%;
+    display: inline-block;
+    background-image: url('./description_bg.jpg');
+    /*border: #fff solid 3px;*/
+    box-shadow: 3px 3px 3px 4px #E4e4e4;
+    opacity: 0;
+  }
+
+  .h_info p{
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .h_info h3{
+    text-align: center;
+  }
+
+  .h_img:hover + .h_info{
+     opacity:1;
+   }
+
+  .bi .h_img{
+    width: 30%;
+    height: 40%;
+    left:13%;
+    top:30%;
+  }
+
+  .mo .h_img{
+    width:5%;
+    height:15%;
+    left:67%;
+    top:66%;
+  }
+
+  .zhi .h_img{
+    width:60%;
+    height:15%;
+    left:20%;
+    top:80%;
+  }
+
+  .yan .h_img{
+    width:25%;
+    height:15%;
+    left:40%;
+    top:70%;
+  }
+
+  .line {
+    display:none;
+  }
+
+}
+
+
+/*--------TOOLS MOBILE VIEW START--------*/
+
+@media (max-width: 768px) {
+
+  .tool_desk{
+    display: none;
+  }
+
+  .mobile_tool{
+    display: block;
+  }
+
+  .toolimgbox img {
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .tooldescriptionbox p{
+    display: block;
+    text-align: left;
+    width:80%;
+    margin-left: 10%;
+  }
+
+  .contentbackground {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    /*border: 1px solid black;*/
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .imgbox {
+    width: 40%;
+    min-height: 50px;
+    /*border: 1px solid black;*/
+    margin: 0px;
+  }
+
+  .descriptionbox {
+    width: 40%;
+    min-height: 10px;
+    /*border: 1px solid black;*/
+    margin: 0px;
+  }
+
+  .toolimgbox{
+    width: 100%;
+    min-height: 50px;
+    /*border: 1px solid black;*/
+    margin: 0px;
+    margin-top:40px;
+  }
+
+  .tooldescriptionbox{
+    width: 100%;
+    min-height: 10px;
+    border-bottom: 1px dashed black;
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+
+  .line {
+    display: block;
+  }
+
+  .line img{
+    display: inline-block;
+    width:80%;
+    margin-left: 10%;
+  }
+｝
