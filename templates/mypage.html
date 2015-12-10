@@ -21,7 +21,7 @@
     </nav>
   </header>
 
-  <content>
+  <!-- <content>
     This is the img
   </content>
   <content>
@@ -34,8 +34,25 @@
 
 <content>
   decription
-</content>
-
+</content> -->
+<div class="mypage">
+  <h2>Personal Profile</h2>
+  <form action="{{ url_for('mypage') }}" method="post" >
+   {{ form.hidden_tag() }}
+   {{ form.name.label }} {{ form.name(placeholder="Name") }}
+   {{ form.password.label }} {{ form.password(placeholder="Password") }}
+   {{ form.submit }}
+   {% for messages in get_flashed_messages() %}
+     <div>
+       {{messages}}
+     </div>
+   {% endfor %}
+   {% if session.username %}
+   {{session['username']}}
+   {% endif %}
+   {{data}}
+  </form>
+</div>
 
 
 

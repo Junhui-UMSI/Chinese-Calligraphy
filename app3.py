@@ -19,7 +19,9 @@ login_manager = LoginManager()  #don't understand
 login_manager.init_app(app)     #don't understand
 # login_manager.login_view = "user.login"
 
-
+UPLOAD_FOLDER = '/Home/Github/Teamproject/static'
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 #decorator that links...
 @app.route('/')          								#This is the main URL
@@ -29,6 +31,7 @@ def default():
 @app.route('/index')          								#This is the main URL
 def index():
     return render_template("index.html", name = "index", title = "HOME PAGE")			#The argument should be in templates folder
+
 def login_required(test):
     @wraps(test)
     def wrap(*args,**kwargs):
@@ -40,12 +43,34 @@ def login_required(test):
     return wrap
 
 
-@app.route('/mypage')          								#This is the main URL
-def community():
-    return render_template("mypage.html", name = "mypage", title = "MYPAGE PAGE")			#The argument should be in templates folder
+@app.route('/mypage', methods = ['GET','POST'])
+@login_required
+def mypage():
+    form = ContactForm()
+    
+    if request.method == 'POST':
+        username = form.name.data
+        newpassword = form.password.data
+        print form.name.data
+        print form.password.data
+        conn = mysql.connect()
+        cursor = conn.cursor()
+        cursor.execute("UPDATE user SET Password = '" +newpassword+ "' WHERE Username='" + username + "' ")
+        conn.commit()
+        flash('Congratulations, you have successfully updated your personal profile')
+        return redirect(url_for('mypage'))
+    else:
+        return render_template('mypage.html', form=form)
 
-@app.route('/history')
-# @login_required          								#This is the main URL
+# def upload_file():
+#     if request.method == 'POST':
+#         file = request.files['file']
+#         if file and allowed_file(file.filename):
+#             filename = secure_filename(file.filename)
+#             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+#             return redirect(url_for('uploaded_file',filename=filename))
+
+@app.route('/history')         								#This is the main URL
 def history():
     return render_template("history.html", name = "history", title = "HISTORY PAGE")			#The argument should be in templates folder
 
@@ -57,9 +82,9 @@ def tools():
 def masterpieces():
     return render_template("masterpieces.html", name = "masterpieces", title = "MASTERPIECES PAGE")
 
-# @app.errorhandler(404)
-# def pageNotFound(e):
-#     return render_template('404.html'), 404
+@app.errorhandler(404)
+def pageNotFound(e):
+    return 'Sorry, the page you are looking for no longer existed.'
 #
 # @app.errorhandler(500)
 # def pageNotFound(e):
@@ -83,7 +108,8 @@ def register():
         cursor = conn.cursor()
         cursor.execute("INSERT INTO user (userName,password) VALUES ('{0}', '{1}')".format(newusername,newpassword))
         conn.commit()
-        return 'Congratulations, you have successfully registered!'
+        flash('Congratulations, you have successfully registered!')
+        return redirect(url_for('login'))
 
     elif request.method == 'GET':
         return render_template('register.html', form=form)

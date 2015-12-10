@@ -10,3 +10,11 @@ class ContactForm(Form):
   subject = TextField("Subject")
   message = TextAreaField("Message")
   submit = SubmitField("Send")
+# 
+# class ProfileForm(Form):
+#   name = TextField("Name")
+#   email = EmailField("Email")
+#   password = TextField("Password")
+#   subject = TextField("Subject")
+#   message = TextAreaField("Message")
+#   submit = SubmitField("Send")
