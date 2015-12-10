@@ -47,7 +47,7 @@ def login_required(test):
 @login_required
 def mypage():
     form = ContactForm()
-    
+
     if request.method == 'POST':
         username = form.name.data
         newpassword = form.password.data
@@ -55,9 +55,16 @@ def mypage():
         print form.password.data
         conn = mysql.connect()
         cursor = conn.cursor()
-        cursor.execute("UPDATE user SET Password = '" +newpassword+ "' WHERE Username='" + username + "' ")
+        cursor.execute("SELECT * from User where Username='" + username + "'")
         conn.commit()
-        flash('Congratulations, you have successfully updated your personal profile')
+        data = cursor.fetchone()
+        if data is None:
+            flash( "Sorry, you are updating a wrong user's information")
+            return redirect(url_for('mypage'))
+        else:
+            cursor.execute("UPDATE user SET Password = '" +newpassword+ "' WHERE Username='" + username + "' ")
+            conn.commit()
+            flash('Congratulations, you have successfully updated your personal profile')
         return redirect(url_for('mypage'))
     else:
         return render_template('mypage.html', form=form)
@@ -84,11 +91,11 @@ def masterpieces():
 
 @app.errorhandler(404)
 def pageNotFound(e):
-    return 'Sorry, the page you are looking for no longer existed.'
-#
-# @app.errorhandler(500)
-# def pageNotFound(e):
-#     return render_template('500.html'), 500
+    return 'Sorry pal, you gotta have another url'
+
+@app.errorhandler(500)
+def pageNotFound(e):
+    return 'You know what, why not try a different url?'
 
 @login_manager.user_loader    #don't understand
 def load_user(user_id):
@@ -106,11 +113,17 @@ def register():
         # cursor = mysql.connect().cursor()
         conn = mysql.connect()
         cursor = conn.cursor()
-        cursor.execute("INSERT INTO user (userName,password) VALUES ('{0}', '{1}')".format(newusername,newpassword))
+        cursor.execute("SELECT * from User where Username='" + newusername + "'")
         conn.commit()
-        flash('Congratulations, you have successfully registered!')
-        return redirect(url_for('login'))
-
+        data = cursor.fetchone()
+        if data is None:
+            cursor.execute("INSERT INTO user (userName,password) VALUES ('{0}', '{1}')".format(newusername,newpassword))
+            conn.commit()
+            flash('Congratulations, you have successfully registered!')
+            return redirect(url_for('login'))
+        else:
+            flash('The username is currently been used, smart as you must can come up with another one')
+            return redirect(url_for('login'))
     elif request.method == 'GET':
         return render_template('register.html', form=form)
 
