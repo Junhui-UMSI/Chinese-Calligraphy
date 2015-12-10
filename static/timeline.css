@@ -1,29 +1,28 @@
 /*@media ( min-width: 320px) {*/
+.filter li{
+  display: inline-block;
+}
   .timelinebox {
     list-style: none;
   }
   .timelinebox .item {
     margin-bottom: 60px;
-  }
-  .timelinebox {
-    list-style: none;
-  }
-  .timelinebox .item {
+    margin-left: 20px;
     overflow: hidden;
     margin: 0;
     position: relative;
   }
   .timeline-date {
-    width: 110px;
+    width: 100%;
     float: left;
     margin: 20px 20px 0 10px;
-    padding-left: 10px;
-    /*margin-right: 20px;*/
+    padding-left: 30px;
   }
   .timeline-content {
     width: 75%;
     float: left;
     border-left: 3px #aaaaaa solid;
+    margin-left: 20px;
     padding-left: 30px;
   }
   .timeline-content::before {
@@ -33,11 +32,25 @@
     background: url("../static/loginbg.png") center center no-repeat;
     background-size: auto 20px;
     position: absolute;
-    left: 141px;
-    top: 24px;
+    left: 10px;
+    top: 18px;
   }
 
 @media ( min-width: 768px) {
+  .timeline-content::before {
+    left: 141px;
+  }
+  .timeline-date {
+    padding-left: 10px;
+    width: 110px;
+  }
+  .timeline-content {
+    width: 75%;
+    float: left;
+    border-left: 3px #aaaaaa solid;
+    padding-left: 30px;
+    margin-left: 0px;
+  }
 
 }
 
@@ -54,7 +67,7 @@
     display: block;
     float: left;
     height: 100%;
-    left: 44.8%;
+    left: 44.5%;
     right: 45%;
     position: absolute;
     width: 2px;
@@ -69,7 +82,7 @@
     /*width:45%;*/
   }
   .timeline-date {
-    width: 95%;
+    width: 90%;
     float: none;
     margin-top: 20px;
   }

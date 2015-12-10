@@ -5,19 +5,30 @@
   <title>Timeline</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../static/abbey.css">
   <link rel="stylesheet" type="text/css" href="../static/timeline.css">
 
 </head>
 
 <body>
+  <div class= "filter">
+    <ul>
+      <li><a>Script filter</a></li>
+      <li><a onclick="seal()">Seal</a></li>
+      <li><a onclick="clerical()">Clerical</a></li>
+      <li><a onclick="cursive()">Cursive</a></li>
+      <li><a onclick="regular()">Regular</a></li>
+      <li><a onclick="semi-cursive()">Semi-Cusive</a></li>
+    </ul>
+  </div>
   <div class="timelinebox">
     <div class="timeline-container">
       <div class="timeline"></div>
     </div>
 
-    <div class="item">
+    <div class="item seal">
       <div class="left">
-        <p class="timeline-date">BC 2070－BC 256 (Pre-Qin era)</p>
+        <p class="timeline-date">BC 2070 – BC 256 (Pre-Qin era)</p>
         <div class="timeline-content">
           <h3>Fragment of the Stone Drum Inscription (石鼓文)</h3>
           <p>Seal script has a very complex definition. Its name is somewhat related to the purpose it serves till today. Seal script was and is mostly used for creating inscriptions and seals, be it for official or private purposes. Despite its name, the
@@ -176,14 +187,9 @@ His works bring back the elegance of the style of Two Wangs. Another example is 
 
   </div>
 
-  {% if session.username %}
-  <p>The session is here!</p>
-  {% else %}
-  <p>The session is not here!</p>
-  {% endif %}
 
 
-
+  <script src="../static/filter.js"></script>
 </body>
 
 </html>

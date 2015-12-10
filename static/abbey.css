@@ -7,8 +7,8 @@ html{
 body {
   /*background: url("../static/basic.png");*/
   /*background-repeat: repeat;*/
-  background: url("../static/background.jpg") center top no-repeat;
-  background-size: auto 1200px;
+  background: url("background.png") center top repeat-y;
+  background-size: 2000px auto;
   min-width: 320px;
   margin: 0 auto;
 }
