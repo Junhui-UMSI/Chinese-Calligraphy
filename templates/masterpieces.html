@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Masterpieces</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../static/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../static/abbey.css">
+  <!-- <noscript>
+            <style>
+                .cn-images img{position: relative;display: block;border-bottom: 5px solid #d0ab47;}
+                .cn-slideshow{height: auto;}
+            </style>
+        </noscript> -->
+</head>
+
+<body>
+  <header>
+    <h1>Chinese Calligraphy</h1>
+    <div id="account_bar">
+        <a class="greet">Welcome, Guest</a>
+      <ul id="login_signup">
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">SignUp</a></li>
+      </ul>
+    </div>
+    
+    <nav class="bigbar">
+      <ul>
+        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="index.html">Index</a></li>
+        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="masterpieces.html">Masterpiece</a></li>
+        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="history.html">History</a></li>
+        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="tools.html">Tools</a></li>
+        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="mypage.html">My Page</a></li>
+      </ul>
+    </nav>
+
+    <nav class="toggle">
+      <img class="toggleicon" src="../static/toggle.png" alt="toggle icon">
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">Index</a></li>
+          <li><a href="masterpieces.html">Masterpiece</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="tools.html">Tools</a></li>
+          <li><a href="mypage.html">My Page</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="gallery">
+    <div class="wrapper">
+      <div id="cn-slideshow" class="cn-slideshow">
+        <div class="cn-images">
+          <img src="../static/images/large/h_zhuan_1.jpg" alt="Fragment of the Stone Drum Inscription" title="Fragment of the Stone Drum Inscription" data-thumb="../static/images/thumbs/hzhuan1.jpg" />
+          <img src="../static/images/large/h_zhuan_2.jpg" alt="Yishan Stele" title="Yishan Stele" data-thumb="../static/images/thumbs/hzhuan2.jpg" />
+          <img src="../static/images/large/h_li_1.jpg" alt="Qingchuan Wooden Slips" title="Qingchuan Wooden Slips" data-thumb="../static/images/thumbs/hli1.jpg" />
+          <img src="../static/images/large/h_li_2.jpg" alt="Caoquan Stele" title="Caoquan Stele" data-thumb="../static/images/thumbs/hli2.jpg" />
+          <img src="../static/images/large/h_cao_1.jpg" alt="Jijiu Book" title="Jijiu Book" data-thumb="../static/images/thumbs/hcao1.jpg" />
+          <img src="../static/images/large/h_cao_2.jpg" alt="Guanjun Tie" title="Guanjun Tie" data-thumb="../static/images/thumbs/hcao2.jpg" />
+          <img src="../static/images/large/h_cao_3.jpg" alt="Autobiography (Zixun Tie)" title="Autobiography (Zixun Tie)" data-thumb="../static/images/thumbs/hcao3.jpg" />
+          <img src="../static/images/large/m_kai_1.jpg" alt="Duobao Pagoda Stele" title="Duobao Pagoda Stele" data-thumb="../static/images/thumbs/mkai1.jpg" />
+          <img src="../static/images/large/m_kai_2.jpg" alt="Xuanmi Pagoda Stele" title="Xuanmi Pagoda Stele" data-thumb="../static/images/thumbs/mkai2.jpg" />
+          <img src="../static/images/large/h_xing_2.jpg" alt="Orchid Pavilion Gathering (Lantingji Xu)" title="Orchid Pavilion Gathering (Lantingji Xu)" data-thumb="../static/images/thumbs/hxing2.jpg" />
+          <img src="../static/images/large/m_xing_2.jpg" alt="Requiem to My Nephew (Jizhi Wengao)" title="Requiem to My Nephew (Jizhi Wengao)" data-thumb="../static/images/thumbs/mxing2.jpg" />
+          <img src="../static/images/large/m_xing_3.jpg" alt="The Cold Food Observance (Hanshi Tie)" title="The Cold Food Observance (Hanshi Tie)" data-thumb="../static/images/thumbs/mxing3.jpg" />
+        </div>
+        <!-- cn-../static/images -->
+      </div>
+      <!-- cn-slideshow -->
+    </div>
+  </div>
+
+  <div id="dialogoverlay"></div>
+  <div id="dialogbox">
+    <div>
+      <div id="dialogboxhead"></div>
+      <div id="dialogboxbody"></div>
+      <div id="dialogboxfoot"></div>
+    </div>
+  </div>
+
+  <div class="save">
+    <!-- add action=get post how to write-->
+    <form>
+    <button type="button" formmethod="post" onclick="Alert.render('Saved to your page!')">Collect this masterpiece</button>
+  </form>
+  </div>
+  <footer>
+    <div class="box">
+      <!-- <div class="social">
+              <a href="">
+                <img src="../image/linkedin.png" alt="linkedin.png">
+              </a>
+              <a href="">
+                <img src="../image/facebook.png" alt="facebook.png">
+              </a>
+              <a href="">
+                <img src="../image/instagram.png" alt="instagram.png">
+              </a>
+            </div> -->
+      <p>Junhui Li, Yining Zhou, Ninglu Wang
+        <span style="font-size:1.3em">&copy;</span> 2015 All Rights Reserved</P>
+    </div>
+  </footer>
+  <script>
+    function spread(li) {
+      li.style.background = "url('../static/navbase.gif') no-repeat";
+      li.style.backgroundSize = "auto 100px";
+    }
+
+    function back(li) {
+      li.style.background = "url('../static/navbase.png') center top no-repeat"
+    }
+  </script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script type="text/javascript" src="../static/jquery.tmpl.min.js"></script>
+  <script type="text/javascript" src="../static/jquery.slideshow.js"></script>
+  <script type="text/javascript" src="../static/dialogue.js"></script>
+  <script src="../static/toggle.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $('#cn-slideshow').slideshow();
+    });
+  </script>
+  <script id="barTmpl" type="text/x-jquery-tmpl">
+    <div class="cn-bar">
+      <div class="cn-nav">
+        <a href="#" class="cn-nav-prev">
+          <span>Previous</span>
+          <div style="background-image:url(${prevSource});"></div>
+        </a>
+        <a href="#" class="cn-nav-next">
+          <span>Next</span>
+          <div style="background-image:url(${nextSource});"></div>
+        </a>
+      </div>
+      <!-- cn-nav -->
+      <div class="cn-nav-content">
+        <div class="cn-nav-content-prev">
+          <span>Previous</span>
+          <h3>${prevTitle}</h3>
+        </div>
+        <div class="cn-nav-content-current">
+          <span>Currently viewing</span>
+          <h2>${currentTitle}</h2>
+        </div>
+        <div class="cn-nav-content-next">
+          <span>Next</span>
+          <h3>${nextTitle}</h3>
+        </div>
+      </div>
+      <!-- cn-nav-content -->
+    </div>
+    <!-- cn-bar -->
+  </script>
+
+</body>
+
+</html>
