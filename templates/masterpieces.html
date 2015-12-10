@@ -25,7 +25,7 @@
         <li><a href="signup.html">SignUp</a></li>
       </ul>
     </div>
-    
+
     <nav class="bigbar">
       <ul>
         <li onmouseover="spread(this)" onmouseout="back(this)"><a href="index.html">Index</a></li>
@@ -85,6 +85,7 @@
   <div class="save">
     <!-- add action=get post how to write-->
     <form>
+    <input type="text" id="imageurl" value="" />
     <button type="button" formmethod="post" onclick="Alert.render('Saved to your page!')">Collect this masterpiece</button>
   </form>
   </div>
@@ -120,6 +121,7 @@
   <script type="text/javascript" src="../static/jquery.slideshow.js"></script>
   <script type="text/javascript" src="../static/dialogue.js"></script>
   <script src="../static/toggle.js"></script>
+  <script src="../static/getimg.js"></script>
   <script type="text/javascript">
     $(function() {
       $('#cn-slideshow').slideshow();
@@ -156,7 +158,9 @@
     </div>
     <!-- cn-bar -->
   </script>
+<!-- <script>
 
+     </script> -->
 </body>
 
 </html>
