@@ -1,28 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>Tools | Chinese Calligrapgy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="./static/tools.css">
-</head>
-
-<body>
-
-  <header>
-    <nav class="smallnav">
-      <ul>
-        <li><a href="index.html">Index</a></li>
-        <li><a href="history.html">History</a></li>
-        <li><a href="tools.html">Tools</a></li>
-        <li><a href="community.html">Community</a></li>
-      </ul>
-    </nav>
-  </header>
+{% extends "base.html" %}
+{% block content %}
 
   <div class="tool_desk">
-    <img src="./static/tool_desk.jpg" alt="tools of chinese calligraphy"></img>
+    <img src="../static/tool_desk.jpg" alt="tools of chinese calligraphy"></img>
 
 
     <div class="bi">
@@ -67,7 +47,7 @@
   <div class="mobile_tool">
 
     <div class="toolimgbox">
-      <img src="./static/bi.png" alt="The traditional ink">
+      <img src="../static/bi.png" alt="The traditional ink">
     </div>
 
     <div class="tooldescriptionbox">
@@ -75,7 +55,7 @@
     </div>
 
     <div class="toolimgbox">
-      <img src="./static/mo.png" alt="The traditional ink">
+      <img src="../static/mo.png" alt="The traditional ink">
     </div>
 
     <div class="tooldescriptionbox">
@@ -83,7 +63,7 @@
     </div>
 
     <div class="toolimgbox">
-      <img src="./static/yan.png" alt="The traditional inkstone">
+      <img src="../static/yan.png" alt="The traditional inkstone">
     </div>
 
     <div class="tooldescriptionbox">
@@ -91,7 +71,7 @@
     </div>
 
     <div class="toolimgbox">
-      <img src="./static/zhi.png" alt="The traditional paper">
+      <img src="../static/zhi.png" alt="The traditional paper">
     </div>
 
     <div class="tooldescriptionbox">
@@ -100,16 +80,4 @@
 
 </div>
 
-  <footer>
-    <div class="smallfootersocialmedia">
-      Social Media infromation
-    </div>
-    <div class="smallfootercontact">
-      Contact informaiton
-    </div>
-
-  </footer>
-
-</body>
-
-</html>
+{% endblock %}
