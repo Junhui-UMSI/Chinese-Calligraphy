@@ -49,7 +49,9 @@ ul{
   padding:0;
   /*height:50px;*/
 }
-
+.greet{
+  width 
+}
 #account_bar {
   margin: 0 auto;
   padding-left: 0;
@@ -62,18 +64,18 @@ ul{
   display:inline-block;
   vertical-align: middle;
   margin-left: 10px;
-  height:80px;
+  height:35px;
 }
 
 #login_signup a{
-  line-height: 80px;
+  line-height: 30px;
   display: block;
   color:white;
   font-family: Georgia, serif;
   text-decoration: none;
   width: 100px;
   background: url("../static/loginbg.png") center center no-repeat;
-  background-size: auto 80px;
+  background:black;
   cursor:url("cursorwhite.png"), auto;
 }
 
@@ -129,6 +131,14 @@ ul{
   margin: 0 auto;
   text-align: center;
 }
+
+footer img{
+  position:absolute;
+  top:50%;
+  width:25px;
+  height:auto;
+}
+
 footer p{
   font-family: Georgia, serif;
   position:absolute;
@@ -399,6 +409,17 @@ transition: all 0.2s ease-out;
 }
 
 @media (min-width: 768px){
+  #login_signup a{
+    line-height: 80px;
+    display: block;
+    color:white;
+    font-family: Georgia, serif;
+    text-decoration: none;
+    width: 100px;
+    background: url("../static/loginbg.png") center center no-repeat;
+    background-size: auto 80px;
+    cursor:url("cursorwhite.png"), auto;
+  }
 
 header{
   width:100%;

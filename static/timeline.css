@@ -1,7 +1,19 @@
 /*@media ( min-width: 320px) {*/
-.filter li{
-  display: inline-block;
+.filter{
+line-height: 30px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
 }
+
+.filter a{
+  display: block;
+  background:white;
+  box-shadow: 2px 2px 2px 2px #888888;
+  width: 120px;
+  margin-left:20px;
+}
+
   .timelinebox {
     list-style: none;
   }
@@ -37,6 +49,11 @@
   }
 
 @media ( min-width: 768px) {
+  .filter a{
+    display: inline-block;
+    margin-right: 20px;
+    margin: 10px 20px 10px 0;
+  }
   .timeline-content::before {
     left: 141px;
   }

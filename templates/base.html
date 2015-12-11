@@ -13,6 +13,7 @@
   <header>
     <h1>Chinese Calligraphy</h1>
     <div id="account_bar">
+      <a class="greet">Welcome, Guest</a>
           <ul id="login_signup">
                 <li><a href="login.html">Login</a></li>
                 <li><a href="signup.html">SignUp</a></li>
@@ -43,6 +44,23 @@
     </nav>
 
   </header>
+
+  {% block content %}
+    content
+  {% endblock %}
+
+  <footer>
+    <div class="box">
+      <img class="social" src="../static/twitter.png" alt="instagram.png">
+      <p>Junhui Li, Yining Zhou, Ninglu Wang
+        <span style="font-size:1.3em">&copy;</span> 2015 All Rights Reserved</P>
+    </div>
+  </footer>
+
+  {% block script %}
+    script
+  {% endblock %}
+
   <script>
     function spread(li) {
       li.style.background = "url('../static/navbase.gif') no-repeat";

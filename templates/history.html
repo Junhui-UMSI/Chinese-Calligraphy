@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,18 +8,20 @@
   <link rel="stylesheet" type="text/css" href="../static/abbey.css">
   <link rel="stylesheet" type="text/css" href="../static/timeline.css">
 
-</head>
+</head> -->
 
+{%extend "base.html" %}
+
+{% block content %}
 <body>
-  <div class= "filter">
-    <ul>
-      <li><a>Script filter</a></li>
-      <li><a onclick="seal()">Seal</a></li>
-      <li><a onclick="clerical()">Clerical</a></li>
-      <li><a onclick="cursive()">Cursive</a></li>
-      <li><a onclick="regular()">Regular</a></li>
-      <li><a onclick="semi-cursive()">Semi-Cusive</a></li>
-    </ul>
+  <form class= "filter">
+    <a><input type="checkbox"  name="ckseal" onclick="seal()" checked>Seal</a>
+    <a><input type="checkbox"  name="ckclerical" onclick="clerical()" checked> Clerical</a>
+    <a><input type="checkbox"  name="ckcursive" onclick="cursive()" checked>Cursive</a>
+    <a><input type="checkbox"  name="ckregular" onclick="regular()" checked> Regular</a>
+    <a><input type="checkbox"  name="cksemicursive" onclick="semicursive()" checked>Semi-Cusive</a>
+  </form>
+
   </div>
   <div class="timelinebox">
     <div class="timeline-container">
@@ -39,7 +41,7 @@
       </div>
     </div>
 
-    <div class="item">
+    <div class="item seal">
       <div class="right">
         <p class="timeline-date">BC 221 (Qin Dynasty)</p>
         <div class="timeline-content">
@@ -50,7 +52,7 @@
       </div>
     </div>
 
-    <div class="item">
+    <div class="item clerical">
       <div class="left">
         <p class="timeline-date">BC 309 - BC 206 (Warring States Period)</p>
         <div class="timeline-content">
@@ -62,7 +64,7 @@ The first stage is from the Warring States period to the beginning of Han Dynast
       </div>
     </div>
 
-    <div class="item">
+    <div class="item clerical">
       <div class="right">
         <p class="timeline-date">BC 206 – AD 220 (Han dynasty)</p>
         <div class="timeline-content">
@@ -75,7 +77,7 @@ The calligraphy skill of anyone who wished to serve as a governmental official w
     </div>
 
 
-    <div class="item">
+    <div class="item cursive">
       <div class="left">
         <p class="timeline-date">57–88 (Han dynasty)</p>
         <div class="timeline-content">
@@ -88,7 +90,7 @@ Emperor Zhang Han was the first ruler that allowed his appointed officers to com
     </div>
 
 
-    <div class="item">
+    <div class="item cursive">
       <div class="right">
         <p class="timeline-date">200 (Han Dynasty)</p>
         <div class="timeline-content">
@@ -99,7 +101,7 @@ Emperor Zhang Han was the first ruler that allowed his appointed officers to com
       </div>
     </div>
 
-    <div class="item">
+    <div class="item cursive">
       <div class="left">
         <p class="timeline-date">618－907 (Tang Dynasty)</p>
         <div class="timeline-content">
@@ -111,7 +113,7 @@ Emperor Zhang Han was the first ruler that allowed his appointed officers to com
     </div>
 
 
-    <div class="item">
+    <div class="item regular">
       <div class="right">
         <p class="timeline-date">170 (Han Dynasty)</p>
         <div class="timeline-content">
@@ -123,7 +125,7 @@ The first symptoms of regular script were already visible in calligraphy works o
       </div>
     </div>
 
-    <div class="item">
+    <div class="item regular">
       <div class="left">
         <p class="timeline-date">220-280 (the Three Kingdoms period)</p>
         <div class="timeline-content">
@@ -135,7 +137,7 @@ Above is an ink rubbing of a fragment of calligraphy in standard script (楷書)
       </div>
     </div>
 
-    <div class="item">
+    <div class="item regular">
       <div class="right">
         <p class="timeline-date">618 - 907 (Tang Dynasty)</p>
         <div class="timeline-content">
@@ -148,19 +150,19 @@ Above is fragment of the Sweet Spring Inscription at Jiucheng Palace (九成宮�
       </div>
     </div>
 
-    <div class="item">
+    <div class="item semicursive">
       <div class="left">
         <p class="timeline-date">BC 25 – AD 220 (Eastern Han dynasty)
 </p>
         <div class="timeline-content">
-          <h3>h_xing_1</h3>
+          <h3>Poems for Autumns</h3>
           <p>Semi-cursive script is the last of the five core scripts of Chinese calligraphy to evolve. Throughout the Han Dynasty (especially its second half) the mature clerical, cursive, semi-cursive and standard scripts were all influencing one another, especially during the earliest stages of development. It further complicates the issue of the origins of the semi-cursive script. The very nature of semi-cursive script is that it falls between the rectangular scripts (regular script and clerical script) and the cursive script. There is also a hybrid script, called 楷行書 (standard semi-cursive script) and 行草書 (semi-cursive cursive script), which are a mixture of each, and their classification depends on the level of “cursiveness”.
 </p>
         </div>
       </div>
     </div>
 
-    <div class="item">
+    <div class="item semicursive">
       <div class="right">
         <p class="timeline-date">265 – 420 (Jin Dynasty)</p>
         <div class="timeline-content">
@@ -172,11 +174,11 @@ It was perfected by the Sage of Calligraphy (書聖), Wang Xizhi (王羲之, 303
       </div>
     </div>
 
-    <div class="item">
+    <div class="item semicursive">
       <div class="left">
         <p class="timeline-date">960 - 1279 (Song Dynasty)</p>
         <div class="timeline-content">
-          <h3>h_xing_3</h3>
+          <h3>Ode to Goddess Luo</h3>
           <p>The renaissance of the semi-cursive script, as well as the art of calligraphy in general, after the fall of Tang dynasty, during the Song Dynasty.
 Among the Song Dynasty calligraphy masters of semi-cursive script who are worth mentioning is the eccentric calligrapher, ink painter and an ink stone collector, Mi Fu (米芾) 1051-1107.
 His works bring back the elegance of the style of Two Wangs. Another example is Zhao Meng-Fu (趙孟頫, 1254-1322), and his powerful handwriting. The last period that gave birth to the outstanding calligraphers knowledgeable in semi-cursive scrip, was the Ming Dynasty (明朝, 1368–1644). Names such as Pu Hsinyu (溥心畬, 1895-1963) or Dong Qichan (董其昌, 1555-1636) come to mind.
@@ -184,12 +186,9 @@ His works bring back the elegance of the style of Two Wangs. Another example is 
         </div>
       </div>
     </div>
-
   </div>
+  {% endblock %}
 
-
-
+  {% block script %}
   <script src="../static/filter.js"></script>
-</body>
-
-</html>
+{% endblock %}

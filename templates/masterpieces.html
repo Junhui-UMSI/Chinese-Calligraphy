@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,12 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../static/favicon.ico">
   <link rel="stylesheet" type="text/css" href="../static/abbey.css">
-  <!-- <noscript>
-            <style>
-                .cn-images img{position: relative;display: block;border-bottom: 5px solid #d0ab47;}
-                .cn-slideshow{height: auto;}
-            </style>
-        </noscript> -->
+
 </head>
 
 <body>
@@ -48,8 +43,10 @@
         </ul>
       </div>
     </nav>
-  </header>
+  </header> -->
+{%extend "base.html" %}
 
+{% block content %}
   <div class="gallery">
     <div class="wrapper">
       <div id="cn-slideshow" class="cn-slideshow">
@@ -89,23 +86,16 @@
     <button type="button" formmethod="post" onclick="Alert.render('Saved to your page!')">Collect this masterpiece</button>
   </form>
   </div>
-  <footer>
+  <!-- <footer>
     <div class="box">
-      <!-- <div class="social">
-              <a href="">
-                <img src="../image/linkedin.png" alt="linkedin.png">
-              </a>
-              <a href="">
-                <img src="../image/facebook.png" alt="facebook.png">
-              </a>
-              <a href="">
-                <img src="../image/instagram.png" alt="instagram.png">
-              </a>
-            </div> -->
+      <img class="social" src="../static/twitter.png" alt="instagram.png">
       <p>Junhui Li, Yining Zhou, Ninglu Wang
         <span style="font-size:1.3em">&copy;</span> 2015 All Rights Reserved</P>
     </div>
-  </footer>
+  </footer> -->
+{% endblock %}
+
+{% block script %}
   <script>
     function spread(li) {
       li.style.background = "url('../static/navbase.gif') no-repeat";
@@ -158,9 +148,5 @@
     </div>
     <!-- cn-bar -->
   </script>
-<!-- <script>
 
-     </script> -->
-</body>
-
-</html>
+{% endblock %}
