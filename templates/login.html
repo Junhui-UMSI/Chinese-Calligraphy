@@ -1,43 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+{%extends "base.html" %}
+{% block content %}
 
-<head>
-  <title>Welcome</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../static/abbey.css">
-</head>
-<link rel="icon" type="image/png" href="../imgs/favicon.ico">
-
-<body>
-  <header>
-    <h1 class="nav_in" href="index.html">Chinese Calligraphy</h1>
-    <nav>
-      <ul>
-        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="index">Index</a></li>
-        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="masterpieces">Masterpiece</a></li>
-        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="history">History</a></li>
-        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="tools">Tools</a></li>
-        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="mypage"> My Page</a></li>
-        {% if session.username %}
-        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="logout">{{session['username']}} 's Log out</a></li>
-        {% else %}
-        <li onmouseover="spread(this)" onmouseout="back(this)"><a href="register"> Register</a></li>
-        {% endif %}
-      </ul>
-
-    </nav>
-  </header>
-  <script>
-    function spread(li) {
-      li.style.background = "url('./imgs/navbase.gif') no-repeat";
-      li.style.backgroundSize = "auto 100px";
-    }
-
-    function back(li) {
-      li.style.background = "url('./imgs/navbase.png') center top no-repeat"
-    }
-  </script>
 
   <div class="login">
     <h2>Login</h2>
@@ -59,6 +22,4 @@
      {{data}}
     </form>
   </div>
-</body>
-
-</html>
+{% endblock %}
