@@ -5,9 +5,9 @@
   <title>Welcome</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="./css/abbey.css">
+  <link rel="stylesheet" type="text/css" href="../static/abbey.css">
 </head>
-<link rel="icon" type="image/png" href="./imgs/favicon.ico">
+<link rel="icon" type="image/png" href="../static/favicon.ico">
 
 <body>
   <header>
@@ -43,7 +43,7 @@
      {{ form.hidden_tag() }} {{ form.name.label }} {{ form.name(placeholder="Name") }}
 
 
-     {{ form.password.label }} {{ form.password(placeholder="Password") }}
+   {{form.password.label}}  {{ form.password(placeholder="Password") }}
 
      {{ form.submit }}
 

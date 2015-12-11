@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request,url_for ,flash,session,redirect #NEW IMPORT -- request
 from flask.ext.wtf import Form
 from wtforms import TextField, TextAreaField, SubmitField
-from forms import ContactForm 					# NEW IMPORT LINE
+from forms import ContactForm, GeturlForm				# NEW IMPORT LINE
 from flaskext.mysql import MySQL
 from flask.ext.login import login_user, login_required, logout_user, LoginManager
 from functools import wraps
@@ -15,8 +15,8 @@ app.config['MYSQL_DATABASE_DB'] = 'EmpData'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 mysql.init_app(app)
 
-login_manager = LoginManager()  #don't understand
-login_manager.init_app(app)     #don't understand
+login_manager = LoginManager()
+login_manager.init_app(app)
 # login_manager.login_view = "user.login"
 
 UPLOAD_FOLDER = '/Home/Github/Teamproject/static'
@@ -46,6 +46,16 @@ def login_required(test):
 @app.route('/mypage', methods = ['GET','POST'])
 @login_required
 def mypage():
+    conn = mysql.connect()
+    cursor = conn.cursor()
+    username = session['username']
+    print username
+    cursor.execute("SELECT src from User where Username='" + username + "'")
+    data1 = cursor.fetchone()
+    print data1
+    data2 = str(data1[0])
+    print data2
+
     form = ContactForm()
 
     if request.method == 'POST':
@@ -67,7 +77,8 @@ def mypage():
             flash('Congratulations, you have successfully updated your personal profile')
         return redirect(url_for('mypage'))
     else:
-        return render_template('mypage.html', form=form)
+        return render_template('mypage.html', form=form,data2 =data2)
+
 
 # def upload_file():
 #     if request.method == 'POST':
@@ -85,9 +96,23 @@ def history():
 def tools():
     return render_template("tools.html", name = "tools", title = "TOOLS PAGE")			#The argument should be in templates folder
 
-@app.route('/masterpieces')          								#This is the main URL
+@app.route('/masterpieces',methods = ['GET','POST'])          								#This is the main URL
 def masterpieces():
-    return render_template("masterpieces.html", name = "masterpieces", title = "MASTERPIECES PAGE")
+    form = GeturlForm()
+    if request.method =='POST':
+        beforenewurl = form.imageurl.data
+        newurl = str(beforenewurl)
+        print form.imageurl.data
+        print newurl
+        currentuser = session['username']
+        print currentuser
+        conn = mysql.connect()
+        cursor = conn.cursor()
+        cursor.execute("UPDATE user SET src = '" +newurl+ "' WHERE Username='" + currentuser + "' ")
+        conn.commit()
+        return render_template("masterpieces.html", name = "masterpieces", title = "MASTERPIECES PAGE", form=form)
+    elif request.method == 'GET':
+        return render_template("masterpieces.html", name = "masterpieces", title = "MASTERPIECES PAGE", form=form)
 
 @app.errorhandler(404)
 def pageNotFound(e):
