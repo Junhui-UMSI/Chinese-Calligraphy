@@ -1,0 +1,148 @@
+/*@media ( min-width: 320px) {*/
+.filter{
+line-height: 30px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.filter a{
+  display: block;
+  background:white;
+  box-shadow: 2px 2px 2px 2px #888888;
+  width: 120px;
+  margin-left:20px;
+}
+
+  .timelinebox {
+    list-style: none;
+  }
+  .timelinebox .item {
+    margin-bottom: 60px;
+    margin-left: 20px;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+  }
+  .timeline-date {
+    width: 100%;
+    float: left;
+    margin: 20px 20px 0 10px;
+    padding-left: 30px;
+  }
+  .timeline-content {
+    width: 75%;
+    float: left;
+    border-left: 3px #aaaaaa solid;
+    margin-left: 20px;
+    padding-left: 30px;
+  }
+  .timeline-content::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: url("../static/loginbg.png") center center no-repeat;
+    background-size: auto 20px;
+    position: absolute;
+    left: 10px;
+    top: 18px;
+  }
+
+@media ( min-width: 768px) {
+  .filter a{
+    display: inline-block;
+    margin-right: 20px;
+    margin: 10px 20px 10px 0;
+  }
+  .timeline-content::before {
+    left: 141px;
+  }
+  .timeline-date {
+    padding-left: 10px;
+    width: 110px;
+  }
+  .timeline-content {
+    width: 75%;
+    float: left;
+    border-left: 3px #aaaaaa solid;
+    padding-left: 30px;
+    margin-left: 0px;
+  }
+
+}
+
+@media ( min-width: 992px) {
+  .timeline-container {
+    width: 16px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
+  .timeline {
+    margin: auto;
+    background-color: #aaaaaa;
+    display: block;
+    float: left;
+    height: 100%;
+    left: 44.5%;
+    right: 45%;
+    position: absolute;
+    width: 2px;
+  }
+
+  .timelinebox{
+    width:80%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .item {
+    /*width:45%;*/
+  }
+  .timeline-date {
+    width: 90%;
+    float: none;
+    margin-top: 20px;
+  }
+  .timeline-content::before {
+    content: none;
+    }
+  .timeline-date::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: url("../static/loginbg.png") center center no-repeat;
+    background-size: auto 20px;
+    position: absolute;
+    margin: auto;
+    left: 44.5%;
+    right:45%;
+    top: 24px;
+  }
+
+  .timeline-content {
+    border-left: none;
+  }
+
+  .left .timeline-date{
+    text-align: right;
+    padding-right: 5%;
+    padding-left: 0;
+  }
+ .left{
+   float: left;
+   width:50%;
+   /*border-right: url("./header.png") 5px;*/
+   border-image: url("./headerrev.png") 50;
+   box-sizing: border-box;
+ }
+ .right .timeline-date{
+   text-align: left;
+   padding-left: 5%;
+ }
+.right{
+  float: right;
+  width:50%;
+  border-image: url("./header.png") 30;
+  border-left: 5px #e5e5d1 solid;
+}
+}
