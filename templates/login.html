@@ -4,7 +4,7 @@
 
   <div class="login">
     <h2>Login</h2>
-    <form action="{{ url_for('login') }}" method="post" >
+    <form action="{{ url_for('login') }}" method="post" class = 'bigbar'>
      {{ form.hidden_tag() }} {{ form.name.label }} {{ form.name(placeholder="Name") }}
 
 
@@ -16,10 +16,10 @@
          {{messages}}
        </div>
      {% endfor %}
-     {% if session.username %}
+     <!-- {% if session.username %}
      {{session['username']}}
      {% endif %}
-     {{data}}
+     {{data}} -->
     </form>
   </div>
 {% endblock %}

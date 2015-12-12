@@ -59,25 +59,30 @@ def mypage():
     form = ContactForm()
 
     if request.method == 'POST':
-        username = form.name.data
+        reusername = form.name.data
         newpassword = form.password.data
         print form.name.data
         print form.password.data
         conn = mysql.connect()
         cursor = conn.cursor()
-        cursor.execute("SELECT * from User where Username='" + username + "'")
-        conn.commit()
-        data = cursor.fetchone()
-        if data is None:
-            flash( "Sorry, you are updating a wrong user's information")
-            return redirect(url_for('mypage'))
-        else:
+        if reusername == username:
+
+        # cursor.execute("SELECT * from User where Username='" + username + "'")
+        # conn.commit()
+        # data = cursor.fetchone()
+        # if data is None:
+        #     flash( "Sorry, you are updating a wrong user's information")
+        #     return redirect(url_for('mypage'))
+        # else:
             cursor.execute("UPDATE user SET Password = '" +newpassword+ "' WHERE Username='" + username + "' ")
             conn.commit()
             flash('Congratulations, you have successfully updated your personal profile')
-        return redirect(url_for('mypage'))
+            return redirect(url_for('mypage'))
+        else:
+            flash('Sorry, you are updating the wrong user profile')
+            return redirect(url_for('mypage'))
     else:
-        return render_template('mypage.html', form=form,data2 =data2)
+        return render_template('mypage.html', form=form,data2 = data2)
 
 
 # def upload_file():
@@ -169,8 +174,9 @@ def login():
             session['logged_in']=True; #what does this do? After i comment it, it still works anyway, yet all the tutorials are saying it.
             session['username']=username # Is it the right way to give the session a temporary id?
             print (session) #seems doesn't work, how can i know whether i'm in the session?
-            flash('Logged in successfully')
-            return render_template('login.html', data=data, form=form)
+            # flash('Logged in successfully')
+            # return render_template('login.html', form=form)
+            return redirect(url_for('mypage'))
 
     elif request.method == 'GET':
         return render_template('login.html', form=form)

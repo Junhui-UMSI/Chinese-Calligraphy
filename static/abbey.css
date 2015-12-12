@@ -50,7 +50,7 @@ ul{
   /*height:50px;*/
 }
 .greet{
-  width 
+  width
 }
 #account_bar {
   margin: 0 auto;
@@ -406,6 +406,10 @@ transition: all 0.4s ease;
 -o-transition: all 0.2s ease-out;
 -ms-transition: all 0.2s ease-out;
 transition: all 0.2s ease-out;
+}
+#mypageimg{
+  display:inherit;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px){
