@@ -1,5 +1,5 @@
 # Teamproject
-This project is for the UMIS Course 539
+This project is for the UMSI Course 539
 
 #Major Breakdown of work
 Junhui Li: flask , mysql, python /
