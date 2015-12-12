@@ -1,0 +1,194 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Timeline</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../static/abbey.css">
+  <link rel="stylesheet" type="text/css" href="../static/timeline.css">
+
+</head> -->
+
+{%extends "base.html" %}
+
+{% block content %}
+<body>
+  <form class= "filter">
+    <a><input type="checkbox"  name="ckseal" onclick="seal()" checked>Seal</a>
+    <a><input type="checkbox"  name="ckclerical" onclick="clerical()" checked> Clerical</a>
+    <a><input type="checkbox"  name="ckcursive" onclick="cursive()" checked>Cursive</a>
+    <a><input type="checkbox"  name="ckregular" onclick="regular()" checked> Regular</a>
+    <a><input type="checkbox"  name="cksemicursive" onclick="semicursive()" checked>Semi-Cusive</a>
+  </form>
+
+  </div>
+  <div class="timelinebox">
+    <div class="timeline-container">
+      <div class="timeline"></div>
+    </div>
+
+    <div class="item seal">
+      <div class="left">
+        <p class="timeline-date">BC 2070 – BC 256 (Pre-Qin era)</p>
+        <div class="timeline-content">
+          <h3>Fragment of the Stone Drum Inscription (石鼓文)</h3>
+          <p>Seal script has a very complex definition. Its name is somewhat related to the purpose it serves till today. Seal script was and is mostly used for creating inscriptions and seals, be it for official or private purposes. Despite its name, the
+            seal script was not always used only for seal making. Its application during the ancient Xia (夏朝, 2070 B.C.E.-1600 B.C.E.), Shang (商朝, 1600–1046 B.C.E.) and Zhou dynasties (周朝, 1046-256 B.C.E.) of China was extremely wide, spanning from carving
+            it on bronze ware, weapons, stelae, official use, seals, and so on. Seal script is the oldest script in the history Chinese calligraphy, and it has been in use for at least 3600 years.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item seal">
+      <div class="right">
+        <p class="timeline-date">BC 221 (Qin Dynasty)</p>
+        <div class="timeline-content">
+          <h3>Yishan Stele (嶧山碑)</h3>
+          <p>It was the Prime Minister Li Si (李斯) of the Qin dynasty of China (秦朝, 221-206 B.C.E.) who unified the great seal script forms under a small seal script in 221 B.C.E.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item clerical">
+      <div class="left">
+        <p class="timeline-date">BC 309 - BC 206 (Warring States Period)</p>
+        <div class="timeline-content">
+          <h3>Qingchuan Wooden Slips</h3>
+          <p>Clerical script naturally evolved from the great seal script, and there are two major stages of development of clerical script (隷書).
+The first stage is from the Warring States period to the beginning of Han Dynasty. During the first stage the clerical script was not fully developed, and had very raw (ancient) appearance, hence the name ancient clerical script (古隷), or old clerical script.
+</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item clerical">
+      <div class="right">
+        <p class="timeline-date">BC 206 – AD 220 (Han dynasty)</p>
+        <div class="timeline-content">
+          <h3>Caoquan Stele</h3>
+          <p>Clerical script becomes the official script of the Chinese Empire during the Han dynasty (漢朝, 206 B.C.E. – 220 C.E.).
+The calligraphy skill of anyone who wished to serve as a governmental official was tested, and the knowledge of clerical script was a vital part of such exams. Clerical script became to be known under the name of official script.
+</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="item cursive">
+      <div class="left">
+        <p class="timeline-date">57–88 (Han dynasty)</p>
+        <div class="timeline-content">
+          <h3>Jijiu Book</h3>
+          <p>Similarly to clerical script, the evolution of cursive script can be divided into two major phases. It its first stage, cursive script that was developed from the clerical script is known as 章草 (zhang cao), which could be translated as a “draft of an order” (i.e. administrative note). This naming was not accidental and it follows the name of the Emperor Zhang of Han (漢章帝, 57–88 C.E.),
+Emperor Zhang Han was the first ruler that allowed his appointed officers to communicate with his by means of the draft script. Zhang cao script was named after him.
+</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="item cursive">
+      <div class="right">
+        <p class="timeline-date">200 (Han Dynasty)</p>
+        <div class="timeline-content">
+          <h3>Guanjun Tie</h3>
+          <p>Cursive script matured during the Han dynasty, and at the end of 2nd century C.E. it was already very well-developed. One of the most renowned Masters of this script was Zhang Zhi (張芝, birth date unknown, died in 190 C.E.). He was the one who initiated 今草, i.e. modern cursive script, modifying it by two other evolving scripts, the standard script and semi-cursive script. Zhang Zhi was one of the most outstanding cursive script Masters of all time, being treated with great respect by calligraphy geniuses such as Wang Xizhi (王羲之, 303–361) of the Jin dynasty (晉朝, 265–420 C.E.), who said himself that Zhang’s calligraphy in cursive hand is unmatched. Zhang Zhi is known today as cao sheng (草聖), which in Chinese means the “sage of cursive script”.
+</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item cursive">
+      <div class="left">
+        <p class="timeline-date">618－907 (Tang Dynasty)</p>
+        <div class="timeline-content">
+          <h3>Four Poems (Gushi Si Tie)</h3>
+          <p>Another remarkable style of cursive script is “wild cursive” (狂草, kuang cao), which was initiated by equally brilliant as drunk and disorderly calligrapher of the Tang dynasty (Tang dynasty; 唐朝, 618 – 907), Zhang Xu (張旭, he exact dates of birth and death are unknown). His works are simply incredible. They are fast and dynamic, but at the same time firm and powerful. The story says that he experienced enlightening while watching a famous female sword dancer. Zhang Xu often attended drinking parties with the monk Huai Su (懷素, 737–799 C.E.). They were known for getting drunk and then writing outstanding pieces of work, until they passed out. Together they were referred to as “Crazy Zhang and Drunk Su (顛張醉素)”.
+</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="item regular">
+      <div class="right">
+        <p class="timeline-date">170 (Han Dynasty)</p>
+        <div class="timeline-content">
+          <h3>Duobao Pagoda Stele</h3>
+          <p>Standard script, or, regular script (楷書), has many names in Chinese language. It is known as “true script“, or “regular calligraphy”, etc. It is the fourth of the Chinese calligraphy scripts in the order of historical appearance.
+The first symptoms of regular script were already visible in calligraphy works of the Eastern Han Dynasty. The ceramic vase unearthed in A.C.170 that were covered in characters, which showed a clear transformation from the mature clerical script to a standard script.
+</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item regular">
+      <div class="left">
+        <p class="timeline-date">220-280 (the Three Kingdoms period)</p>
+        <div class="timeline-content">
+          <h3> Xuanmi Pagoda Stele</h3>
+          <p>It is widely believed that the creator and the first Master of the standard script was a calligrapher and a politician of the State of Cao Wei (曹魏, 220 -265), also known as Cao Wei dynasty, which existed during the Three Kingdoms period (三國時代, 220–280 C.E.), named Zhong Yao (鍾繇, 151-230).
+Above is an ink rubbing of a fragment of calligraphy in standard script (楷書) with semi-cursive script (行書) accents, calligraphy attributed to Zhong Yao.
+</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item regular">
+      <div class="right">
+        <p class="timeline-date">618 - 907 (Tang Dynasty)</p>
+        <div class="timeline-content">
+          <h3>Ni Kuan Zan</h3>
+          <p>Standard script undergoes various stages of development, beginning with the famous works of Zhong Yao, and reaches its peak during the golden age of Chinese calligraphy, the Tang Dynasty (唐朝, 618 – 907).
+Great Masters such as Ouyang Xun (歐陽詢, 557-641), Chu Suliang (褚遂良, 596-659), Lee Yong (李邕, 678-747), Zhong Shaojing (鐘紹京, second half of 7th century), Zhen Yanquing (顏真卿, 709-785), or Liu Gongchuan (柳公權, 778-865), elevate the regular script to its pinnacle or excellence and refinement.
+Above is fragment of the Sweet Spring Inscription at Jiucheng Palace (九成宮醴泉銘), calligraphy by Ouyang Xun (歐陽詢, 557-641), Tang Dynasty (唐朝, 618–907). This masterpiece is considered to be one of the most outstanding examples of standard script.
+</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item semicursive">
+      <div class="left">
+        <p class="timeline-date">BC 25 – AD 220 (Eastern Han dynasty)
+</p>
+        <div class="timeline-content">
+          <h3>Poems for Autumns</h3>
+          <p>Semi-cursive script is the last of the five core scripts of Chinese calligraphy to evolve. Throughout the Han Dynasty (especially its second half) the mature clerical, cursive, semi-cursive and standard scripts were all influencing one another, especially during the earliest stages of development. It further complicates the issue of the origins of the semi-cursive script. The very nature of semi-cursive script is that it falls between the rectangular scripts (regular script and clerical script) and the cursive script. There is also a hybrid script, called 楷行書 (standard semi-cursive script) and 行草書 (semi-cursive cursive script), which are a mixture of each, and their classification depends on the level of “cursiveness”.
+</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item semicursive">
+      <div class="right">
+        <p class="timeline-date">265 – 420 (Jin Dynasty)</p>
+        <div class="timeline-content">
+          <h3> Orchid Pavilion Gathering (Lantingji Xu)</h3>
+          <p>Semi-cursive script reaches its excellence during the Jin Dynasty (晉朝, 265 – 420 C.E.), which is shockingly fast (about 150 years from the moment it started to appear), especially if you consider the extended period of time during which other scripts matured.
+It was perfected by the Sage of Calligraphy (書聖), Wang Xizhi (王羲之, 303 – 361), and also one of his sons, Wang Xianzhi (王獻之, 344 – 386). Both of them are quite often tagged as “Two Wangs” (二王).
+</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item semicursive">
+      <div class="left">
+        <p class="timeline-date">960 - 1279 (Song Dynasty)</p>
+        <div class="timeline-content">
+          <h3>Ode to Goddess Luo</h3>
+          <p>The renaissance of the semi-cursive script, as well as the art of calligraphy in general, after the fall of Tang dynasty, during the Song Dynasty.
+Among the Song Dynasty calligraphy masters of semi-cursive script who are worth mentioning is the eccentric calligrapher, ink painter and an ink stone collector, Mi Fu (米芾) 1051-1107.
+His works bring back the elegance of the style of Two Wangs. Another example is Zhao Meng-Fu (趙孟頫, 1254-1322), and his powerful handwriting. The last period that gave birth to the outstanding calligraphers knowledgeable in semi-cursive scrip, was the Ming Dynasty (明朝, 1368–1644). Names such as Pu Hsinyu (溥心畬, 1895-1963) or Dong Qichan (董其昌, 1555-1636) come to mind.
+</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+
+  {% block script %}
+  <script src="../static/filter.js"></script>
+{% endblock %}
