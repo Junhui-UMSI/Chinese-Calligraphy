@@ -43,9 +43,8 @@ ul {
   padding: 0;
   /*height:50px;*/
 }
-.greet {
-  width
-}
+
+
 #account_bar {
   margin: 0 auto;
   padding-left: 0;
@@ -117,6 +116,14 @@ ul {
   margin: 0 auto;
   text-align: center;
 }
+
+.loginbar{
+  display:block;
+}
+
+.loginbar input {
+  margin-right: 30px;
+}
 footer img {
   position: absolute;
   top: 50%;
@@ -182,12 +189,13 @@ footer p {
   padding-left: 0;
   margin-bottom: 0;
   background: url("header.png") center center no-repeat;
+  display:block;
 }
 .menu a {
   font-family: Georgia, serif;
   display: block;
-  color: black;
-  background: url("abase.png") center no-repeat;
+  color: white;
+  /*background: url("abase.png") center no-repeat;*/
   background-size: 110% 90%;
   margin-bottom: 2px;
   padding: 3px;
@@ -202,6 +210,9 @@ footer p {
   top: 75px;
 }
 
+.menu.active a {
+  display: block;
+}
 /*from gallery.css*/
 
 .save {
@@ -404,10 +415,18 @@ a.cn-nav-next {
   display: inherit;
   margin: 0 auto;
   margin-top: 20px;
+  width: auto;
+  height: 80%;
 }
 #imageurl{
   display:none;
 }
+#mycollectionimg{
+  height:500px;
+  width:90%;
+  margin: 0 auto;
+}
+
 @media (min-width: 768px) {
   #login_signup a {
     line-height: 80px;

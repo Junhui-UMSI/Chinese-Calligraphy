@@ -86,7 +86,7 @@
     <button type="button" formmethod="post" onclick="Alert.render('Saved to your page!')">Collect this masterpiece</button> -->
     {{ form.hidden_tag() }}
     {{ form.imageurl(id="imageurl") }}
-    {{ form.submit(onclick = "Alert.render('Saved to your page!')") }}
+    {{ form.submit(id="imagesent",onclick = "Alert.render('Saved to your page!')") }}
   </form>
   </div>
   <!-- <footer>

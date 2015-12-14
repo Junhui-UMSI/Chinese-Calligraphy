@@ -104,17 +104,21 @@ def tools():
 def masterpieces():
     form = GeturlForm()
     if request.method =='POST':
-        beforenewurl = form.imageurl.data
-        newurl = str(beforenewurl)
-        print form.imageurl.data
-        print newurl
-        currentuser = session['username']
-        print currentuser
-        conn = mysql.connect()
-        cursor = conn.cursor()
-        cursor.execute("UPDATE user SET src = '" +newurl+ "' WHERE Username='" + currentuser + "' ")
-        conn.commit()
-        return render_template("masterpieces.html", name = "masterpieces", title = "MASTERPIECES PAGE", form=form)
+        if 'username' in session:
+            beforenewurl = form.imageurl.data
+            newurl = str(beforenewurl)
+            print form.imageurl.data
+            print newurl
+            currentuser = session['username']
+            print currentuser
+            conn = mysql.connect()
+            cursor = conn.cursor()
+            cursor.execute("UPDATE user SET src = '" +newurl+ "' WHERE Username='" + currentuser + "' ")
+            conn.commit()
+            return render_template("masterpieces.html", name = "masterpieces", title = "MASTERPIECES PAGE", form=form)
+        else:
+            flash('Sorry, you need to log in to collect the items')
+            return redirect(url_for('login'))
     elif request.method == 'GET':
         return render_template("masterpieces.html", name = "masterpieces", title = "MASTERPIECES PAGE", form=form)
 
