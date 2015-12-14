@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request,url_for ,flash,session,redirect #NEW IMPORT -- request
 from flask.ext.wtf import Form
 from wtforms import TextField, TextAreaField, SubmitField
-from forms import ContactForm, GeturlForm				# NEW IMPORT LINE
+from forms import ContactForm, GeturlForm, ChangeForm				# NEW IMPORT LINE
 from flaskext.mysql import MySQL
 from flask.ext.login import login_user, login_required, logout_user, LoginManager
 from functools import wraps
@@ -56,8 +56,7 @@ def mypage():
     data2 = str(data1[0])
     print data2
 
-    form = ContactForm()
-
+    form = ChangeForm()
     if request.method == 'POST':
         reusername = form.name.data
         newpassword = form.password.data

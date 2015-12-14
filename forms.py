@@ -21,3 +21,11 @@ class ContactForm(Form):
 class GeturlForm(Form):
     imageurl = TextField("imageurl")
     submit = SubmitField("Collect this masterpieces")
+
+class ChangeForm(Form):
+      name = TextField("Name")
+      email = EmailField("Email")
+      password = TextField("Password")
+      subject = TextField("Subject")
+      message = TextAreaField("Message")
+      submit = SubmitField("Change Password")

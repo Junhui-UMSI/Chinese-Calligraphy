@@ -13,18 +13,18 @@ header {
 }
 
 footer {
-  background: url('./12.jpg') repeat left top;
+  /*background: url('./12.jpg') repeat left top;*/
   display: inline-block;
   width: 100%;
   text-align: center;
   border-radius: 3px;
   font-size: 10px;
   text-decoration: none;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 nav ul {
-  border-top: 1px solid #636366;
+  /*border-top: 1px solid #636366;*/
   list-style: none;
   display: -webkit-inline-box;
   margin: 0;
