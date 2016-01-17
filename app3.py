@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request,url_for ,flash,session,redirect #NEW IMPORT -- request
 from flask.ext.wtf import Form
-from wtforms import TextField, TextAreaField, SubmitField
-from forms import ContactForm, GeturlForm				# NEW IMPORT LINE
+from wtforms import TextField, TextAreaField, SubmitField, PasswordField
+from forms import ContactForm, GeturlForm, ChangeForm				# NEW IMPORT LINE
 from flaskext.mysql import MySQL
 from flask.ext.login import login_user, login_required, logout_user, LoginManager
 from functools import wraps
@@ -56,8 +56,7 @@ def mypage():
     data2 = str(data1[0])
     print data2
 
-    form = ContactForm()
-
+    form = ChangeForm()
     if request.method == 'POST':
         reusername = form.name.data
         newpassword = form.password.data
@@ -105,17 +104,21 @@ def tools():
 def masterpieces():
     form = GeturlForm()
     if request.method =='POST':
-        beforenewurl = form.imageurl.data
-        newurl = str(beforenewurl)
-        print form.imageurl.data
-        print newurl
-        currentuser = session['username']
-        print currentuser
-        conn = mysql.connect()
-        cursor = conn.cursor()
-        cursor.execute("UPDATE user SET src = '" +newurl+ "' WHERE Username='" + currentuser + "' ")
-        conn.commit()
-        return render_template("masterpieces.html", name = "masterpieces", title = "MASTERPIECES PAGE", form=form)
+        if 'username' in session:
+            beforenewurl = form.imageurl.data
+            newurl = str(beforenewurl)
+            print form.imageurl.data
+            print newurl
+            currentuser = session['username']
+            print currentuser
+            conn = mysql.connect()
+            cursor = conn.cursor()
+            cursor.execute("UPDATE user SET src = '" +newurl+ "' WHERE Username='" + currentuser + "' ")
+            conn.commit()
+            return render_template("masterpieces.html", name = "masterpieces", title = "MASTERPIECES PAGE", form=form)
+        else:
+            flash('Sorry, you need to log in to collect the items')
+            return redirect(url_for('login'))
     elif request.method == 'GET':
         return render_template("masterpieces.html", name = "masterpieces", title = "MASTERPIECES PAGE", form=form)
 
