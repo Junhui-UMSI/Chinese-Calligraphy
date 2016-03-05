@@ -41,7 +41,7 @@ line-height: 30px;
     content: '';
     width: 20px;
     height: 20px;
-    background: url("../static/loginbg.png") center center no-repeat;
+    background: url("../static/images/loginbg.png") center center no-repeat;
     background-size: auto 20px;
     position: absolute;
     left: 10px;
@@ -110,7 +110,7 @@ line-height: 30px;
     content: '';
     width: 20px;
     height: 20px;
-    background: url("../static/loginbg.png") center center no-repeat;
+    background: url("../static/images/loginbg.png") center center no-repeat;
     background-size: auto 20px;
     position: absolute;
     margin: auto;
@@ -132,7 +132,7 @@ line-height: 30px;
    float: left;
    width:50%;
    /*border-right: url("./header.png") 5px;*/
-   border-image: url("./headerrev.png") 50;
+   border-image: url("../images/headerrev.png") 50;
    box-sizing: border-box;
  }
  .right .timeline-date{
@@ -142,7 +142,7 @@ line-height: 30px;
 .right{
   float: right;
   width:50%;
-  border-image: url("./header.png") 30;
+  border-image: url("../images/header.png") 30;
   border-left: 5px #e5e5d1 solid;
 }
 }

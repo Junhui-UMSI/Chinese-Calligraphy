@@ -92,7 +92,7 @@ h3 {
     top:5%;
     left:25%;
     display: inline-block;
-    background-image: url('./description_bg.jpg');
+    background-image: url('../images/description_bg.jpg');
     /*border: #fff solid 3px;*/
     box-shadow: 3px 3px 3px 4px #E4e4e4;
     opacity: 0;

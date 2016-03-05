@@ -6,7 +6,7 @@ html {
 body {
   /*background: url("../static/basic.png");*/
   /*background-repeat: repeat;*/
-  background: url("background.png") center top repeat-y;
+  background: url("../images/background.png") center top repeat-y;
   background-size: 2000px auto;
   min-width: 320px;
   margin: 0 auto;
@@ -33,7 +33,7 @@ h1 {
   display: block;
   color: white;
   padding: 30px 0;
-  background: url("../static/header.png") center center no-repeat;
+  background: url("../images/header.png") center center no-repeat;
   background-size: 100% 70%;
   background-position: -15px;
   margin: 0 auto;
@@ -65,9 +65,9 @@ ul {
   font-family: Georgia, serif;
   text-decoration: none;
   width: 100px;
-  background: url("../static/loginbg.png") center center no-repeat;
+  background: url("../images/loginbg.png") center center no-repeat;
   background: black;
-  cursor: url("cursorwhite.png"), auto;
+  cursor: url("../images/cursorwhite.png"), auto;
 }
 @keyframes animatedBackground {
   from {
@@ -81,7 +81,7 @@ ul {
   position: relative;
   height: 0;
   width: 100%;
-  background: url("../static/clouds.png") center top repeat-x;
+  background: url("../images/clouds.png") center top repeat-x;
   padding-top: 10%;
   background-size: 40% auto;
   animation: animatedBackground 24s linear infinite;
@@ -89,7 +89,7 @@ ul {
 .container {
   position: relative;
   height: 0;
-  background: url("../static/navigation.png") center top no-repeat;
+  background: url("../images/navigation.png") center top no-repeat;
   background-size: contain;
   width: 100%;
   padding-top: 40%;
@@ -99,14 +99,14 @@ ul {
   position: absolute;
   text-align: center;
   text-indent: -9999em;
-  cursor: url("../static/cursor.png"), auto;
+  cursor: url("../images/cursor.png"), auto;
 }
 .box {
   position: relative;
   height: 0;
   width: 100%;
   padding-top: 30%;
-  background: url("../static/footer.png")center bottom no-repeat;
+  background: url("../images/footer.png")center bottom no-repeat;
   background-size: 100% 90%;
   text-align: center;
   margin: 0 auto;
@@ -188,7 +188,7 @@ footer p {
   margin-top: 5px;
   padding-left: 0;
   margin-bottom: 0;
-  background: url("header.png") center center no-repeat;
+  background: url("../images/header.png") center center no-repeat;
   display:block;
 }
 .menu a {
@@ -283,7 +283,7 @@ button {
   margin: -25px 0 0 -25px;
   width: 50px;
   height: 50px;
-  background: #000 url("navbase.gif") no-repeat center center;
+  background: #000 url("../images/navbase.gif") no-repeat center center;
   -moz-border-radius: 25px;
   -webkit-border-radius: 25px;
   border-radius: 25px;
@@ -302,7 +302,7 @@ button {
   margin: 0 auto;
 }
 .cn-bar {
-  background: transparent url(./images/bar.png) repeat top left;
+  background: transparent url(../images/bar.png) repeat top left;
   height: 30px;
   position: absolute;
   top: -40px;
@@ -380,13 +380,13 @@ a.cn-nav-next {
   transition: all 0.4s ease;
 }
 .cn-nav a.cn-nav-prev span {
-  background: #666 url(./images/prev.png) no-repeat center center;
+  background: #666 url(../images/prev.png) no-repeat center center;
   background-size: 50% auto;
   height: 25px;
   width: 25px;
 }
 .cn-nav a.cn-nav-next span {
-  background: #666 url(./images/next.png) no-repeat center center;
+  background: #666 url(../images/next.png) no-repeat center center;
   background-size: 50% auto;
   height: 25px;
   width: 25px;
@@ -435,9 +435,9 @@ a.cn-nav-next {
     font-family: Georgia, serif;
     text-decoration: none;
     width: 100px;
-    background: url("../static/loginbg.png") center center no-repeat;
+    background: url("../images/loginbg.png") center center no-repeat;
     background-size: auto 80px;
-    cursor: url("cursorwhite.png"), auto;
+    cursor: url("../images/cursorwhite.png"), auto;
   }
   header {
     width: 100%;
@@ -469,16 +469,16 @@ a.cn-nav-next {
     width: 20%;
     text-align: center;
     vertical-align: middle;
-    background: url("navbase.png") center center no-repeat;
+    background: url("../images/navbase.png") center center no-repeat;
   }
   .bigbar li a {
     font-weight: bold;
     display: inline-block;
-    cursor: url("cursor.png"), auto;
+    cursor: url("../images/cursor.png"), auto;
     color: black;
     font-family: Georgia, serif;
     text-decoration: none;
-    background: url("abase.png") center no-repeat;
+    background: url("../images/abase.png") center no-repeat;
     background-size: auto 50px;
     line-height: 50px;
     width: 100%;
@@ -505,7 +505,7 @@ a.cn-nav-next {
     margin: -25px 0 0 -25px;
     width: 50px;
     height: 50px;
-    background: #000 url("navbase.gif") no-repeat center center;
+    background: #000 url("../images/navbase.gif") no-repeat center center;
     -moz-border-radius: 25px;
     -webkit-border-radius: 25px;
     border-radius: 25px;
@@ -524,7 +524,7 @@ a.cn-nav-next {
     margin: 0 auto;
   }
   .cn-bar {
-    background: transparent url(./images/bar.png) repeat top left;
+    background: transparent url(../images/bar.png) repeat top left;
     height: 70px;
     position: absolute;
     top: auto;
@@ -662,7 +662,7 @@ a.cn-nav-next {
     margin: -25px 0 0 -25px;
     width: 50px;
     height: 50px;
-    background: #000 url("./images/ajax-loader.gif") no-repeat center center;
+    background: #000 url("../images/ajax-loader.gif") no-repeat center center;
     -moz-border-radius: 25px;
     -webkit-border-radius: 25px;
     border-radius: 25px;
@@ -681,7 +681,7 @@ a.cn-nav-next {
     margin: 0 auto;
   }
   .cn-bar {
-    background: transparent url(./images/bar.png) repeat top left;
+    background: transparent url(../images/bar.png) repeat top left;
     height: 90px;
     position: absolute;
     bottom: 0px;
@@ -790,10 +790,10 @@ a.cn-nav-next {
     transition: all 0.4s ease;
   }
   .cn-nav a.cn-nav-prev span {
-    background: #666 url(./images/prev.png) no-repeat center center;
+    background: #666 url(../images/prev.png) no-repeat center center;
   }
   .cn-nav a.cn-nav-next span {
-    background: #666 url(./images/next.png) no-repeat center center;
+    background: #666 url(../images/next.png) no-repeat center center;
   }
   .cn-nav a div {
     width: 0px;
