@@ -2,7 +2,7 @@
 This project is for the UMSI Course 539
 
 #Major Breakdown of work
-![download](static/images/bar.png)
+<!--![download](static/images/bar.png)-->
 Junhui Li: html, css, javaScript, flask , mysql /
 Abbey : html, css, javascript, jQuery /
 Joeyning: html, css , javascript
